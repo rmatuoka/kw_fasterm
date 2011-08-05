@@ -1,5 +1,6 @@
 KwFasterm::Application.routes.draw do
   
+  resources :atualizar
   resources :visitas
   resources :testimonials
   resources :sustentabilidade
@@ -22,7 +23,11 @@ KwFasterm::Application.routes.draw do
   resources :categorias
   resources :cases
   resources :busca
-  resources :home
+  resources :home do
+    collection do
+      get :atualizar
+    end
+  end
   root :to => "home#index"
   
 end
