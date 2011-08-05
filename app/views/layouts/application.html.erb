@@ -1,14 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>KwFasterm</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fasterm <%=yield :title%></title>	
+<%=javascript_include_tag :defaults %>
+<%=javascript_include_tag "jquery"%>
+<script>
+	jQuery.noConflict();
+</script>
+<%= csrf_meta_tag %>
+<%=stylesheet_link_tag "internal" %>
+<%=yield :head%>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="GeneralbgFooter">
+	<div id="General">
+		<div id="Header">
+        	<div id="Contato"><a href="#">Área Restrita</a> | <a href="#">Contato</a></div>
+			<%= render :file => "layouts/_menu.html.erb"%>
+        	<div id="Logo"></div>        
+		</div>
+        <div id="Featured">destaque</div>
+		<%= yield %>                                                                          
+		<div id="clear"></div>
+		<div id="Footer"> 
+			<%= render :file => "layouts/_footer.html.erb"%>
+		</div>
+	</div>    
+</div>
 </body>
 </html>

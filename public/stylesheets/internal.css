@@ -1,0 +1,446 @@
+@charset "utf-8";
+/* CSS Document */
+/* beginning of reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/* end of reset*/
+html
+{
+	
+	position:relative;
+	width:100%;
+	height:100%;
+	
+}
+body
+{
+	position:relative;
+	background-image:url(../images/bg_internal_top.jpg);
+	background-repeat:no-repeat;
+	background-position:top center;		
+	width:100%;
+	height:100%;	
+}
+#GeneralbgFooter
+{
+	background-image:url(../images/bg_internal_bot.jpg);
+	background-position: bottom center;
+	background-repeat:no-repeat;
+	position:relative;
+	width:100%;
+	min-height:1000px;
+	margin:auto;
+}
+#General
+{
+	position:relative;
+	width:1000px;
+	min-height:1000px;
+	margin:auto;
+}
+	
+	#Header
+	{
+		position:relative;
+		width:1000px;
+		min-height:162px;
+		margin:auto;
+	}
+		#Contato
+		{
+			width:150px;
+			min-height:25px;
+			margin:auto;
+			float:right;
+		}	
+		#Menu
+		{
+			background-image:url(../images/menu/bg_menu.png);
+			background-repeat:no-repeat;
+			background-position:center;
+			position:absolute;
+			left:260px;
+			top:128px;
+			width:495px;
+			height:33px;
+			margin:auto;
+		}	
+		#Menu ul
+		{
+			position:relative;
+			margin-top:10px;
+			*padding-top:10px;  /*ie7*/	
+			margin-left:21px;
+			width:auto;
+		}
+		#Menu li
+		{
+			display:inline;
+			margin-right:14px;			
+		}
+		.item_align
+			{
+			}			
+		.Bt_empresa_menu
+		{	
+		}
+			.Bt_empresa_menu a
+			{
+				background-image:url(../images/menu/bt_empresa.png);
+				background-repeat:no-repeat;
+				background-position:0px 4px;
+				width:128px;
+				height:14px;
+				text-decoration:none;
+				padding-right:72px;	
+				*padding-top:17px;  /*ie7*/								
+			}	
+			.Bt_empresa_menu a:hover
+			{
+					background-image:url(../images/menu/bt_empresa.png);
+					background-repeat:no-repeat;
+					background-position:0px -11px;
+					width:128px;
+					height:14px;				
+			}	
+			
+			
+			.Bt_produtos_menu
+			{	
+			}
+				.Bt_produtos_menu a
+				{
+					background-image:url(../images/menu/bt_produtos.png);
+					background-repeat:no-repeat;
+					background-position:0px 3px;
+					width:128px;
+					height:14px;
+					text-decoration:none;
+					padding-right:74px;	
+					*padding-top:17px;  /*ie7*/										
+				}	
+				.Bt_produtos_menu a:hover
+				{
+						background-image:url(../images/menu/bt_produtos.png);
+						background-repeat:no-repeat;
+						background-position:0px -12px;
+						width:128px;
+						height:14px;				
+				}	
+			.Bt_servicos_menu
+			{	
+			}
+				.Bt_servicos_menu a
+				{
+					background-image:url(../images/menu/bt_servicos.png);
+					background-repeat:no-repeat;
+					background-position:0px 4px;
+					width:128px;
+					height:14px;
+					text-decoration:none;
+					padding-right:80px;	
+					*padding-top:17px;  /*ie7*/										
+				}	
+				.Bt_servicos_menu a:hover
+				{
+						background-image:url(../images/menu/bt_servicos.png);
+						background-repeat:no-repeat;
+						background-position:0px -16px;
+						width:128px;
+						height:14px;				
+				}	
+			.Bt_cases_menu
+			{	
+			}
+				.Bt_cases_menu a
+				{
+					background-image:url(../images/menu/bt_cases.png);
+					background-repeat:no-repeat;
+					background-position:0px 4px;
+					width:128px;
+					height:14px;
+					text-decoration:none;
+					padding-right:57px;	
+					*padding-top:17px;  /*ie7*/											
+				}	
+				.Bt_cases_menu a:hover
+				{
+						background-image:url(../images/menu/bt_cases.png);
+						background-repeat:no-repeat;
+						background-position:0px -11px;
+						width:128px;
+						height:14px;				
+				}	
+			.Bt_cases2_menu
+			{	
+			}
+				.Bt_cases2_menu a
+				{
+					background-image:url(../images/menu/bt_eventos.png);
+					background-repeat:no-repeat;
+					background-position:0px 4px;
+					width:128px;
+					height:14px;
+					text-decoration:none;
+					padding-right:75px;
+					*padding-top:17px;  /*ie7*/												
+				}	
+				.Bt_cases2_menu a:hover
+				{
+						background-image:url(../images/menu/bt_eventos.png);
+						background-repeat:no-repeat;
+						background-position:0px -11px;
+						width:128px;
+						height:14px;				
+				}					
+						
+																
+								
+	#Featured /*Destaque*/
+	{
+		position:relative;
+		width:1000px;
+		height:325px;
+		margin:auto;
+	}											
+	#Content
+	{
+		position:relative;
+		display:inline-block;
+		width:1000px;
+		min-height:300px;
+		height:auto;
+		margin:auto;
+	}	
+		#Box_content_internal
+		{
+			position:relative;
+			display:block;
+			width:999px;
+			min-height:300px;
+			height:auto;
+			float:left;
+			margin:auto;
+		}
+			.Title_internal_h1
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:23px;
+				font-weight:normal;
+				color:#e13f20;
+				margin-left:-25px;	
+			}
+			.Text_internal_p
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#5b5b5b;
+				text-align:justify;
+				width:850px;			
+			}
+		label_orange
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:14px;	
+			color:#cc3300;
+			font-weight:normal;
+		}			
+			input_orange
+			{
+				border:#cc3300 1px solid;
+				width:200px;	
+			}
+		.label_red
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:14px;	
+			color:#990000;
+			font-weight:normal;
+		}			
+			.input_red
+			{
+				border:#990000 1px solid;
+				width:200px;	
+			}
+			.buttom_send
+			{
+				float:right;
+				margin-right:34px;
+			}									
+		.Box_content h1
+		{
+			text-align:left;
+			height:48px;
+		}	
+		.Box_content h2
+		{
+			width:270px;
+			text-align:left;
+			margin-left:20px;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:14px;
+			color:#ff0000;			
+		}
+		.Box_video
+		{
+			background-image:url(../images/bg_video.png);
+			background-repeat:repeat-y;
+			background-position:top center;	
+			position:relative;
+			width:330px;
+			min-height:360px;
+			float:left;
+			display:block;
+			*width:331px;
+			*float:left;
+			*display:block;
+			text-align:center;
+			margin-left:10px;	
+
+		}		
+		.Box_video h1
+		{
+			text-align:left;
+			margin-left:10px;
+			height:48px;
+		}	
+		.Box_video h2
+		{
+			width:270px;
+			text-align:left;
+			margin-left:20px;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:14px;
+			color:#ff0000;			
+		}
+		.Box_video p
+		{
+			width:280px;
+			text-align:left;
+			margin-left:20px;
+		
+		}						
+		.Data
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:11px;
+			color:#990000;
+		}
+		.Box_content img
+		{
+			text-align:left;
+		}			
+		.Box_content p
+		{
+			width:270px;
+			margin:auto;
+			text-align:left;
+		}		
+		.font_green_12
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			color:#336600;
+		}	
+		.font_blue_12
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			color:#0066ff;
+		}
+		.font_orange_12
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			color:#cc3300;
+		}	
+		.font_red_12
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			color:#990000;
+		}		
+		.font_black_12
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			color:#333333;
+		}								
+	#Footer
+	{
+		position:relative;
+		font-family:Verdana, Geneva, sans-serif;
+		color:#339933;
+		font-size:11px;
+		position:relative;
+		width:1000px;
+		min-height:132px;
+		margin:auto;
+		clear:both	
+	}
+		#Footer_content_box	
+		{
+			position:relative;
+			display:block;
+			background-image:url(../images/bg_footer_content.png);
+			background-repeat:no-repeat;
+			background-position:center;	
+			width:280px;	
+			height:46px;
+			top:117px;	
+			padding:10px 10px 10px 10px;
+		}	
+			#Footer_content_box	p
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:11px;
+				font-weight:normal;
+				color:#48932e;
+			}					
+	.clear{ clear:both; width:100%}
