@@ -1,0 +1,2 @@
+module ImprensaHelper
+end
