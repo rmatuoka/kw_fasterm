@@ -1,2 +1,28 @@
-<h1>Linhas#index</h1>
-<p>Find me in app/views/linhas/index.html.erb</p>
+<%content_for :title do%>
+	Produto
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "produtos" %>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id="Line_box">
+			<div id="Home_line">
+				<%=link_to image_tag ("img_home_line.png", :width=>"256", :height=>"427"),"#"%>
+			</div>
+			<div id="Busines_line">
+				<%=link_to image_tag ("img_busines_line.png", :width=>"256", :height=>"445"),"#"%>
+			</div>
+			<div id="Solar_line">
+				<%=link_to image_tag ("img_solar_line.png", :width=>"256", :height=>"516"),"#"%>
+			</div>
+			<div id="Field_line">
+			<p>CONHEÇA OS<br /><br />
+				ESQUEMAS <br /><br />
+				DE INSTALAÇÃO<br /><br />
+				<%=image_tag ("img_detail_rightlinhas.png", :width=>"188", :height=>"139" ,:class=>"Detail_align")%>
+			</p>
+			</div>			
+		</div>	
+	</div>
+</div>
