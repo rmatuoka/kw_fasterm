@@ -422,7 +422,8 @@ body
 		width:1000px;
 		min-height:132px;
 		margin:auto;
-		clear:both	
+		clear:both;	
+		margin-top:70px;
 	}
 		#Footer_content_box	
 		{

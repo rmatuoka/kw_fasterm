@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#Title_div
+{
+	width:150px;
+	height:45px;
+}
+.Title_h1
+{
+	width:auto;
+	height:auto;
+	display:block;
+}
+.Text_span
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#5b5b5b;
+	text-align:left;
+	position:relative;
+	display:block;
+	margin-bottom:-10px;
+}
+#Box_show
+{
+	position:relative;
+	width:900px;
+	height:auto;
+	min-height:50px;
+	margin:auto;
+}
+	.Box_line_item
+	{
+		position:relative;
+		width:100%;
+		height:auto;
+		min-height:50px;
+	}
+		.Up_line_item
+		{
+			position:relative;
+			width:100%;
+			height:auto;
+			min-height:10px;
+		}
+		.Photo_line
+		{
+			position:relative;
+			float:left;
+			width:158px;
+			height:auto;
+			min-height:50px;	
+			padding-top:20px;
+		}
+		.Photo_line img
+		{
+			position:relative;
+			display:block;
+			float:left;
+		}
+		.Text_line
+		{
+			position:relative;
+			float:left;
+			width:742px;
+			height:auto;
+			min-height:50px;
+			padding-top:20px;	
+		}	
+			.Align_ball
+			{
+				position:absolute;
+				top:29px;
+				left:-18px;
+				text-align:left;
+			}
+			.Title
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:23px;
+				font-weight:normal;
+				color:#b80c06;
+				text-align:left;
+			}		
+			.Text_paragh
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#5b5b5b;
+				text-align:left;
+				width:720px;
+			}						
+	.Buttons_line
+	{
+		position:relative;
+		float:right;
+		width:900px;
+		height:auto;
+		min-height:30px;
+		text-align:right;
+		padding-top:10px;	
+	}			
