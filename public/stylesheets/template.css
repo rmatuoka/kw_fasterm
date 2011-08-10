@@ -109,6 +109,7 @@ body
 			width:495px;
 			height:33px;
 			margin:auto;
+			z-index:10000;s
 		}	
 		#Menu ul
 		{
@@ -241,13 +242,26 @@ body
 						
 																
 												
-    #Featured /*Destaque*/
+    #Featured  /*Destaque*/
 	{
 		position:relative;
 		width:1000px;
 		height:325px;
 		margin:auto;
-	}											
+	}	
+		#Featured #Carousel_freatured 
+		{
+			position:relative;
+			top:-15px;
+			left:-4px;
+			width:768px;
+			height:325px;
+			border:none;
+		}	
+		#Featured #Carousel_freatured img
+		{
+			border:none;
+		}													
 	#Content
 	{
 		position:relative;
