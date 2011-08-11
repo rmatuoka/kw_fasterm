@@ -91,13 +91,31 @@ body
 		min-height:162px;
 		margin:auto;
 	}
+	
+	#Logo{
+		margin-top:10px;
+		margin-left:50px;
+		}
+	
 		#Contato
 		{
-			width:150px;
+			width:250px;
 			min-height:25px;
 			margin:auto;
 			float:right;
-		}	
+			
+		}
+		
+		#Contato a
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:bold;
+			text-transform:uppercase;
+			color:#830000;
+			text-decoration:none
+		}
+			
 		#Menu
 		{
 			background-image:url(../images/menu/bg_menu.png);
@@ -271,14 +289,14 @@ body
 			margin-left:10px;
 		}
 		
-		label_orange
+		.label_orange
 		{
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:14px;	
 			color:#cc3300;
 			font-weight:normal;
 		}			
-			input_orange
+			.input_orange
 			{
 				border:#cc3300 1px solid;
 				width:200px;	
@@ -353,11 +371,12 @@ body
 			margin-left:20px;
 		
 		}						
-		.Data
+		#Data
 		{
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:11px;
 			color:#990000;
+			margin-top:-10px;
 		}
 		.Box_content img
 		{
@@ -374,31 +393,40 @@ body
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:12px;
 			color:#336600;
+			line-height:18px;
 		}	
 		.font_blue_12
 		{
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:12px;
 			color:#0066ff;
+			line-height:18px;
 		}
 		.font_orange_12
 		{
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:12px;
 			color:#cc3300;
+			line-height:18px;
 		}	
 		.font_red_12
 		{
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:12px;
 			color:#990000;
+			line-height:18px;
 		}		
 		.font_black_12
 		{
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:12px;
 			color:#333333;
-		}								
+			line-height:18px;
+		}
+		
+		#Noticias{
+			margin-top:-130px;
+			}								
 #Footer
 	{
 		position:relative;

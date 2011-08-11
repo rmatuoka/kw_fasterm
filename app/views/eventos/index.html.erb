@@ -1,2 +1,34 @@
-<h1>Eventos#index</h1>
-<p>Find me in app/views/eventos/index.html.erb</p>
+<%content_for :title do%>
+	Eventos
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "eventos" %>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id='tit_internal'>
+			<img src='../images/tit_eventos.png'>
+		</div>
+		<div id='Content_eventos'>
+			<div id='eventos_border'>
+				<img src='../images/bg_tit.png'>
+			</div>
+			<div id='eventos_corpo'>
+				<div id='eventos_imagem'>
+					<img src='../images/img_evento.jpg'>
+				</div>
+				<div id='eventos_texto'>
+					<h1>25/05/2011</h1>
+					<h2>HOSPITALAR 2010, 17ª FEIRA INTERNACIONAL DE PRODUTOS, EQUIPAMENTOS, SERVIÇOS E TECNOLOGIA.</h2>
+				</div>
+				<div id='eventos_mais'>
+					<a href='#'><img src='../images/bt_mais.png'></a>
+				</div>
+				<div id='divclear'></div>
+			</div>
+			<div id='eventos_border'>
+				<img src='../images/bg_tit.png'>
+			</div>
+		</div>
+	</div>
+</div>
