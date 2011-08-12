@@ -1,2 +1,29 @@
-<h1>Cases#index</h1>
-<p>Find me in app/views/cases/index.html.erb</p>
+<%content_for :title do%>
+	Cases
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "cases" %>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id='tit_internal'>
+			<img src='images/tit_cases.png'>
+		</div>
+		<div id='Content_cases'>
+			<ul>
+				<a href='#'><li class='tit_case_menos'>Clubes e Academias</li><a>
+				<div class='itens_cases'><img src='images/img_cases.png'><p>Academia Wave em Balneário Camburiú - SC</p></div>
+				<div class='itens_cases'><img src='images/img_cases.png'><p>Academia Wave em Balneário Camburiú - SC</p></div>
+				<div class='itens_cases'><img src='images/img_cases.png'><p>Academia Wave em Balneário Camburiú - SC</p></div><div id='divclear'></div>
+				<a href='#'><li class='tit_case_mais'>Hospitais</li><a>
+				<a href='#'><li class='tit_case_mais'>Hoteis e Moteis</li><a>
+				<a href='#'><li class='tit_case_mais'>Residenciais</li><a>
+			</ul>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+		
+	</div>
+</div>

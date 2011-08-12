@@ -18,7 +18,9 @@
 		<div id="Header">
 			<div id="Contato"><a href="#">Área Restrita</a> | <a href="#">Contato</a></div>
 			<%= render :file => "layouts/_menu.html.erb"%>
-			<div id="Logo"></div>
+			<div id="Logo">
+				<a href'#'><img src='images/logo.png'></a>
+			</div>
 		</div>
 		<div id="Featured">
 			<div id="Carousel_freatured">
@@ -75,25 +77,25 @@
 				<p class="font_red_12">Você com certeza já ouviu a palavra sustentabilidade e, por ser um tema muito.</p> 
 				<br />
 				<p class="font_red_12">Você com certeza já ouviu a palavra sustentabilidade e, por ser um tema muito.</p>  
-			</div>    
-			<div class="Box_content">
+			</div> 
+			<div class="Box_content" id='Noticias'>
 				<h1><img src="images/tit_noticias.png" width="117" height="48" /></h1> 
 				<br /> 
 				<h2>Treinamento Fasterm </h2>
 				<br /> 
-				<p class="Data">11/09/2010</p> 
+				<p id="Data">11/09/2010</p> 
 				<br />  
 				<p class="font_black_12">Dando início aos trabalhos de abertura das para todo o mercado nacional, dos linha Fasterm, realizamos no último dia19/08, em nossa fábrica em Atibaia, o primeiro treinamento.</p> 
 			</div>  
-			<div class="Box_content">
+			<div class="Box_content" id='Noticias'>
 				<h1></h1> 
 				<br /> 
 				<h2>Treinamento Fasterm </h2>
 				<br /> 
-				<p class="Data">11/09/2010</p> 
+				<p id="Data">11/09/2010</p> 
 				<br />  
 				<p class="font_black_12">Dando início aos trabalhos de abertura das para todo o mercado nacional, dos linha Fasterm, realizamos no último dia19/08, em nossa fábrica em Atibaia, o primeiro treinamento.</p> 
-			</div>                                                  
+			</div>                                                 
 		</div>
 		<div id="clear"></div>
 		<%= render :file => "layouts/_footer.html.erb"%>
