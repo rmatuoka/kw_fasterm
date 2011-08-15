@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Line_box
+{	
+	position:relative;
+	width:100%;
+	height:auto;
+	min-height:100px;
+	top:0px;
+	left:45px;
+}
+ #Contato_boxleft
+ {
+	 position:relative;
+	 float:left;
+	 width:455px;
+	 height:395px; 
+ }
+	 #input_bg_field
+	 {
+		 background-image:url(../images/bg_dados_contato.png);
+		 background-repeat:no-repeat;
+		 background-position:top center;
+		 width:449px;
+		 height:41px;
+	 } 
+	 #input_bg_message textarea
+	 {
+			 font-family:Verdana, Geneva, sans-serif;
+			 font-size:18px;
+			 font-weight:normal;
+			 color:#5b5b5b;
+			 width:362px;
+			 height:204px;
+			 border:none;
+			 background:transparent;
+	 } 	 
+	 label
+	 {
+		 display:block;
+		 font-family:Verdana, Geneva, sans-serif;
+		 font-size:16px;
+		 font-weight:normal;
+		 color:#5b5b5b;
+		 margin-bottom:10px;
+	 } 	 
+		 #input_bg_field input
+		 {
+			 font-family:Verdana, Geneva, sans-serif;
+			 font-size:18px;
+			 font-weight:normal;
+			 color:#5b5b5b;
+			 border:none;
+			 width:445px;
+			 height:41px;
+			 background:transparent;
+		 } 	 
+  #input_bg_message
+ {
+	 background-image:url(../images/bg_contato_message.png);
+	 background-repeat:no-repeat;
+	 background-position:top center;
+	 width:362px;
+	 height:204px;
+ } 
+ 
+  #Contato_boxright
+ {
+	 position:relative;	 
+	 float:left;
+	 width:455px;
+	 height:395px;	
+	 margin-left:80px;
+ }
+	  #Contato_boxright .bt_align_contato
+	 {
+		 position:relative;
+		 top:0px;
+		 left:265px;
+	 } 
+ 
+ 
