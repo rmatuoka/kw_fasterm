@@ -2,13 +2,6 @@
 	margin-bottom:10px;
 	}
 	
-#Content_cases p{
-	color:#5b5b5b;
-	width:950px;
-	margin-left:30px;
-	margin-top:20px;
-	}
-	
 #tit_internal{
 	background:url(../images/bg_tit.png);
 	background-position:bottom right;
@@ -50,14 +43,31 @@
 	float:left;
 	}
 
-.itens_cases p{
+p{
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:12px;
 	color:#2f4b2f;
-	margin-top:5px;
-	display:inline-block;
+	margin-top:10px;
 	}
 
 #divclear{
 	clear:both;
+	}
+
+#text_content_cases{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#2f4b2f;
+	width:940px;
+	margin-left:30px;
+	}
+
+#img_content_cases ul{
+	 margin-left:130px;
+	 margin-top:20px;
+	}
+
+#img_content_cases ul a li{
+	display:inline;
+	margin-left:10px;
 	}
