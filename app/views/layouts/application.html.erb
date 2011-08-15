@@ -16,11 +16,17 @@
 <div id="GeneralbgFooter">
 	<div id="General">
 		<div id="Header">
-        	<div id="Contato"><a href="#">Área Restrita</a> | <a href="#">Contato</a></div>
+			<div id="Contato"><a href="#">Área Restrita</a> | <a href="#">Contato</a></div>
 			<%= render :file => "layouts/_menu.html.erb"%>
-        	<div id="Logo"></div>        
+			<div id="Logo">
+				<a href'#'><img src='images/logo.png'></a>
+			</div>
 		</div>
-        <div id="Featured">destaque</div>
+        <div id="Featured">
+			<div id="Carousel_freatured">
+				<%=yield :featured_image%>	
+			</div>
+		</div>
 		<%= yield %>                                                                          
 		<div id="clear"></div>
 		<div id="Footer"> 

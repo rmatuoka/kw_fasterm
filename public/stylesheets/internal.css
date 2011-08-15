@@ -93,11 +93,21 @@ body
 	}
 		#Contato
 		{
-			width:150px;
+			width:180px;
 			min-height:25px;
 			margin:auto;
-			float:right;
-		}	
+			float:right;		
+		}
+			#Contato a
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:11px;
+				font-weight:normal;
+				text-transform:uppercase;
+				color:#830000;
+				text-decoration:none
+			}
+					
 		#Menu
 		{
 			background-image:url(../images/menu/bg_menu.png);
@@ -241,22 +251,24 @@ body
 						
 																
 								
-	#Featured /*Destaque*/
+    #Featured  /*Destaque*/
 	{
 		position:relative;
 		width:1000px;
 		height:325px;
 		margin:auto;
-	}
+	}	
 		#Featured #Carousel_freatured 
 		{
 			position:relative;
-			top:-15px;
-			left:-4px;
+			top:-13px;
+			*left:11px;
+			left:12px;
 			width:768px;
 			height:325px;
 			border:none;
-		}	
+		}
+	}			
 	#Content
 	{
 		position:relative;
