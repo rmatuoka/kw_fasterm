@@ -22,6 +22,7 @@ KwFasterm::Application.routes.draw do
   resources :depoimentos
   resources :categorias
   resources :cases
+  resources :contato
   resources :busca
   resources :home do
     collection do
