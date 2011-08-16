@@ -16,12 +16,18 @@
 	background-position:center right;
 	background-repeat:no-repeat;
 	padding-left:90px;
-	padding-top:2px;
+	padding-top:3px;
 	font-family:Verdana, Geneva, sans-serif;
-	font-weight:bold;
 	font-size:18px;
 	color:#344875;
+	text-decoration:none;
+	cursor:pointer;
 	}
+
+a{
+	text-decoration:none;
+	cursor:pointer;
+}
 
 .tit_case_mais{
 	height:30px;
@@ -29,12 +35,17 @@
 	background-position:center right;
 	background-repeat:no-repeat;
 	padding-left:90px;
-	padding-top:2px;
+	padding-top:3px;
 	font-family:Verdana, Geneva, sans-serif;
-	font-weight:bold;
 	font-size:18px;
 	color:#344875;
+	text-decoration:none;
+	cursor:pointer;
 	}
+	
+.tit_case_mais a{
+	text-decoration:none;
+}
 
 .itens_cases{
 	width:160px;
@@ -70,4 +81,8 @@ p{
 #img_content_cases ul a li{
 	display:inline;
 	margin-left:10px;
+	}
+
+.hide{
+	display:none;
 	}
