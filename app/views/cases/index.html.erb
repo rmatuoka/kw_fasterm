@@ -3,32 +3,107 @@
 <%end%>
 <%content_for :head do %>
 	<%= stylesheet_link_tag "cases" %>
+	<%=javascript_include_tag "showcases.js"%>
 <%end%>
 <div id="Content">
 	<div id="Box_content_internal">
 		<div id='tit_internal'>
-			<img src='images/tit_cases.png'>
+			<img src='../images/tit_cases.png'>
 		</div>
 		<div id='Content_cases'>
-			<ul>
-				<a href='#'>
-					<li class='tit_case_menos'>Clubes e Academias</li><a>
+			<ul>			
+				<li class='tit_case_menos' onclick="show_session(1, this)">Clubes e Academias</li>
+				<div id='box_cases1' class='hide'>				
+					<a href='#'>
 						<div class='itens_cases'>
-							<img src='images/img_cases.png'>
+							<img src='../images/img_cases.png'>
 							<p>Academia Wave em Balneário Camburiú - SC</p>
 						</div>
+					</a>
+					<a href='#'>
 						<div class='itens_cases'>
-							<img src='images/img_cases.png'>,
+							<img src='../images/img_cases.png'>,
 							<p>Academia Wave em Balneário Camburiú - SC</p>
 						</div>
+					</a>
+					<a href='#'>
 						<div class='itens_cases'>
-							<img src='images/img_cases.png'>
+							<img src='../images/img_cases.png'>
 							<p>Academia Wave em Balneário Camburiú - SC</p>
 						</div>
-						<div id='divclear'></div>
-				<a href='#'><li class='tit_case_mais'>Hospitais</li><a>
-				<a href='#'><li class='tit_case_mais'>Hoteis e Moteis</li><a>
-				<a href='#'><li class='tit_case_mais'>Residenciais</li><a>
+					</a>
+				</div>
+				
+				<div id='divclear'></div>
+				<li class='tit_case_menos' onclick="show_session(2, this)">Hospitais</li>
+				<div id='box_cases2' class='hide'>				
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>,
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+				</div>
+				
+				<div id='divclear'></div>
+				<li class='tit_case_menos' onclick="show_session(3, this)">Hoteis e Moteis</li>
+				<div id='box_cases3' class='hide'>				
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>,
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+				</div>
+				
+				<div id='divclear'></div>
+				<li class='tit_case_menos' onclick="show_session(4, this)">Residenciais</li>
+				<div id='box_cases4' class='hide'>				
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>,
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+					<a href='#'>
+						<div class='itens_cases'>
+							<img src='../images/img_cases.png'>
+							<p>Academia Wave em Balneário Camburiú - SC</p>
+						</div>
+					</a>
+				</div>
+				
+				<div id='divclear'></div>
 			</ul>
 			<br>
 			<br>
