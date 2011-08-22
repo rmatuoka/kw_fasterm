@@ -4,7 +4,7 @@
 <%content_for :head do %>
 <%end%>
 <%content_for :featured_image do %>
-	<img src='images/img_freatured_aempresa.png'>
+	<%= image_tag("img_freatured_empresa.png")%>
 <%end%>
 
 <div id="Content">
@@ -13,14 +13,14 @@
 		<br />
 		<img src="images/img_line_detailinternal.png" width="867" height="7" />
 		<br /><br /><br />
-		<p class="Text_internal_p">
-		    A NAUTILUS é uma empresa atuante no mercado a mais de 25 anos e seu principal foco é a comercialização de equipamentos, acessórios e aquecedores para piscinas. Por trabalhar sempre de forma muito expressiva no mercado e por toda a história que possui, a NAUTILUS se tornou uma das melhores empresas no ramo.
-		    <br /><br />
-		    O crescimento do grupo NAUTILUS gerou a necessidade de buscar um público maior e ampliar o alcance da empresa.  Para que isso se tornasse possível, foi lançada uma linha de aquecedores de água a 55 ºC.
-		    <br /><br />
-		    A FASTERM é uma marca pertencente ao grupo NAUTILUS que trabalha com seu foco direcionado a empresas da área hoteleira (podendo ser hotéis ou motéis), hospitais, escolas, clubes, academias e condomínios, enfim, estabelecimentos que tenham como artigo de necessidade primária uma grande quantidade de água quente.
-		    <br /><br />
-		    Entre as mais variadas vantagens nos serviços oferecidos pela FASTERM é possível citar a fácil integração a sistemas existentes, como, por exemplo, caldeiras, aquecimento a gás, solar entre outros. Além das imensas vantagens de custo, já que, em média, são registradas reduções de 50% a 75% comparando o sistema FASTERM com outros sistemas de aquecimento a gás e elétrico, possibilita um retorno do capital investido em um prazo médio de 18 meses.        
-		</p>
+		<div id="Box_text_internal">
+			<% if !@Erro %>	
+				<%=image_tag(@DynamicPage.image.url)%>
+				<%= raw @DynamicPage.body%>
+			<% else %>
+				<%= raw @DynamicPage %>
+			<% end %>
+			<div id="clear"></div>
+		</div>
 	</div>
 </div>

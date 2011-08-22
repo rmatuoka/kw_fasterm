@@ -1,0 +1,28 @@
+<%= form_for ([:admin, @Case, @CaseImage], :html => { :multipart => :true }) do |f| %>
+	<div id="mensagem">
+		<h2><%=flash[:msg]%></h2>
+		<%= errors_for(@CaseImage, "Ocorreu um erro").html_safe %>
+	</div>
+	<label>
+		Imagem:<br>
+		<%=f.file_field :image %><br>
+	</label><br><br>
+	
+	<label>
+		Título:<br>
+		<%=f.text_field :title %><br>
+	</label><br><br>
+	
+	<label>
+		Legenda:<br>
+		<%=f.text_field :legend %><br>
+	</label><br><br>
+	
+	<label>
+		Publicado?<br>
+		<%=f.radio_button :published, 0 %> Não
+		<%=f.radio_button :published, 1 %> Sim  
+	</label><br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>

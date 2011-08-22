@@ -1,0 +1,40 @@
+<%= form_for([:admin, @Event], :html => { :multipart => :true }) do |f| %>
+<% if flash[:msg] %>
+<div id="mensagem">
+	<h2><%=flash[:msg]%></h2>
+	<%= errors_for(@Event, "Ocorreu um erro").html_safe %>
+</div>
+<% end %>
+	<label>
+		Nome:<br>
+		<%=f.text_field :title %><br>
+	</label><br><br>
+	
+	<label>
+		Imagem Home:<br>
+		<%=f.file_field :image %><br>
+	</label><br><br>
+	
+	<label>
+		Descrição:<br>
+		<%=f.text_area :description, :class => "mceEditor" %><br>
+	</label><br><br>
+	
+	<label>
+		De:<br>
+		<%=f.text_field :date_start %><br>
+	</label>
+	
+	<label>
+		Até :<br>
+		<%=f.text_field :date_end %><br>
+	</label><br><br>
+	
+	<label>
+		Publicado?<br>
+		<%=f.radio_button :published, 0 %> Não
+		<%=f.radio_button :published, 1 %> Sim  
+	</label><br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>

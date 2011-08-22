@@ -4,7 +4,7 @@
 <%content_for :head do %>
 <%end%>
 <%content_for :featured_image do %>
-	<img src='images/img_freatured_servicos.png'>
+	<%= image_tag("img_freatured_servicos.png")%>
 <%end%>
 <div id="Content">
 	<div id="Box_content_internal">
@@ -12,17 +12,14 @@
 		<br />
 		<img src="images/img_line_detailinternal.png" width="867" height="7" />
 		<br /><br /><br />
-		<p class="Text_internal_p">
-		    A FASTERM direciona seus serviços à busca de uma redução significativa nos gastos de seus clientes com o aquecimento predial (cozinha, banheiro e lavanderia) e de piscinas. Quando comparados a aquecedores convencionais, os aquecedores FASTERM podem oferecer até 75% de economia de energia. Para quer isso seja possível, a empresa tem à disposição uma tecnologia avançada, além de um vasto conhecimento para se utilizar de sistemas integrados, fazendo com que eles atuem da melhor forma possível para seus clientes.
-		    <br /><br />
-		    Todos os equipamentos são oferecidos com vantagens de baixo custo de instalação e manutenção, além disso, a FASTERM possui uma grande rede de assistentes devidamente capacitados para atender da forma mais rápida e eficaz a todos os clientes no local onde as instalações foram feitas, o que assegura a garantia dos equipamentos.
- 
-		    <br /><br />
-		    Para facilitar todo o processo de aquisição de seus produtos e serviços, a FASTERM criou algumas formas diferenciadas de financiamento e comercialização. Entre elas destacam-se o CARTÃO BNDES, que dá ao adquirente a possibilidade de pagamento em até 48 parcelas, a juros extremamente atrativos.
-		    <br /><br />
-		    Outra forma diferenciada é a que busca trazer para o seu cliente uma maior tranquilidade no momento da decisão da compra. Para isso a FASTERM desenvolveu um tipo de aquisição de seus sistemas, que visa dar total garantia ao adquirente, sem que para ele seja atribuído todo o risco da decisão.
-			<br /><br />
-			Para ter mais informações sobre esses e outros sistemas de compra, entre em contato conosco e saiba qual a melhor forma de adquirir seu sistema FASTERM. a com constância, visando a garantia do sistema de recirculação de água.
-		</p>
+		<div id="Box_text_internal">
+		<% if !@Erro%>	
+			<%=image_tag(@DynamicPage.image.url)%>
+			<%= raw @DynamicPage.body%>
+		<% else %>
+			<%= raw @DynamicPage %>
+		<% end %>
+			<div id="clear"></div>
+		</div>
 	</div>
 </div>

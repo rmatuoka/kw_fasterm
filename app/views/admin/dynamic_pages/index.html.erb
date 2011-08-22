@@ -1,0 +1,38 @@
+<%if flash[:msg]%>
+	<%=flash[:msg]%>
+<%end%>
+
+	<div id="Breadcrumb">
+		administração > <a href="<%=admin_dynamic_pages_path%>">páginas dinâmicas</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Páginas Dinâmicas</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_dynamic_page_path%></li>
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<% @DynamicPages.each do |d| %>
+			<tr class="bgCinzaC">
+			<td class="Name"><li class="Bullet">
+				<%
+					linkPub = "<img src='/images/adm/icones/published/"
+					linkPub += d.published.to_s
+					linkPub += ".png' border='0' class='status' />"
+				%>
+				<%= raw linkPub%>
+				<%=link_to d.title, admin_dynamic_page_path(d) %></li></td>
+			<td class="Actions">
+				<li class="Edit"><%= link_to "Editar", edit_admin_dynamic_page_path(d)%></li>
+				<li class="Del"><%= link_to "Excluir", admin_dynamic_page_path(d), :method => :delete, :confirm => "Tem certeza?"%></li>
+				<!-- <li class="Add"><%= link_to "Headers", admin_dynamic_page_headers_path(d)%></li> -->
+			</td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+		<div class="Linha"></div>
+	</div>

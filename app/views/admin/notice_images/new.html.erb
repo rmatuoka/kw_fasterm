@@ -1,0 +1,17 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_notice_notice_images_path%>">produtos</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Novo Imagem</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_notice_notice_image_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<%=render :partial => "form" %>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

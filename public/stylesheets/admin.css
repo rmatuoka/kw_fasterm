@@ -1,0 +1,376 @@
+*
+{
+	margin:0px;
+	padding:0px;
+	font-family:Century Gothic, Tahoma;
+}
+
+img
+{
+	border:none;
+}
+
+textarea
+{
+	width:100%;
+}
+
+body
+{
+	background-color:#FFFFFF;
+	text-align:center;	
+}
+
+a:hover
+{
+	color:#ed1c24;
+}
+
+#Geral
+{
+	position:relative;
+	width:1010px;
+	margin:auto;
+	text-align:left;
+}
+
+	#Geral #Header
+	{
+		position:relative;
+		width:100%;
+		height:126px;
+		background-image:url('../images/adm/bg_header.jpg');
+		background-repeat:no-repeat;
+		display:table;
+		/*border-bottom:1px solid #333333;*/
+		/*border:1px solid red;*/
+	}
+	
+	#Geral #Header #Logo
+	{
+		position:relative;
+		top:34px;
+		left:24px;
+		/*background-image:url('../images/adm/logo.png');*/
+		width:83px;
+		height:80px;
+		float:left;
+	}
+	
+	#Geral #Menu
+	{
+		position:relative;
+		text-align:center;
+		/*border:1px solid red;*/
+		margin-top:50px;
+		*margin-top:0px;
+	}
+	
+		#Geral #Menu li
+		{
+			display:inline;
+			width:64px;
+			height:auto;
+			min-height:24px;
+			padding:0px 7px 0px 7px;
+			text-align:center;
+			/*border:1px solid red;*/
+			padding-top:55px;
+			background-repeat:no-repeat;
+			background-position:center 10px;
+			border:1px solid #CCCCCC;
+			-moz-border-radius: 15px;
+			-webkit-border-radius: 15px;
+			cursor:pointer;
+			list-style: none;
+			margin-right:10px;
+		}
+		
+		#Geral #Menu li:hover
+		{
+			background-color:#EEEEEE;
+		}
+		
+		#Geral #Menu li a
+			{
+				font-size:12px;
+				color:#999999;
+				text-decoration:none;
+			}
+	
+		#Geral #Menu .Home
+		{
+			background-image:url("../images/adm/icones/ico_home.png");
+		}
+		
+		#Geral #Menu .Usuarios
+		{
+			background-image:url("../images/adm/icones/ico_users.png");
+		}
+		
+		#Geral #Menu .Paginas
+		{
+			background-image:url("../images/adm/icones/ico_paginas.png");
+		}	
+		
+		#Geral #Menu .Destaques
+		{
+			background-image:url("../images/adm/icones/ico_destaques.png");
+		}
+		
+		#Geral #Menu .Noticias
+		{
+			background-image:url("../images/adm/icones/ico_noticias.png");
+		}
+		
+		#Geral #Menu .Cases
+		{
+			background-image:url("../images/adm/icones/ico_cases.png");
+		}
+		
+		#Geral #Menu .Produtos
+		{
+			background-image:url("../images/adm/icones/ico_produtos.png");
+		}
+		
+		#Geral #Menu .Eventos
+		{
+			background-image:url("../images/adm/icones/ico_eventos.png");
+		}
+		
+		#Geral #Menu .Newsreaders
+		{
+			background-image:url("../images/adm/icones/ico_newsreaders.png");
+		}
+		
+		#Geral #Menu .Contatos
+		{
+			background-image:url("../images/adm/icones/ico_contatos.png");
+		}
+		
+		#Geral #Menu .Visitas
+		{
+			background-image:url("../images/adm/icones/ico_visitas.png");
+		}
+		
+	#Geral #Breadcrumb
+	{
+		position:relative;
+		font-size:10px;
+		color:#333333;
+		margin:30px 0px 10px 0px;
+	}
+	
+		#Geral #Breadcrumb a
+		{
+			text-decoration:none;
+			color:#333333;
+		}
+		
+	#Geral #Content
+	{
+		position:relative;
+		width:100%;
+	}
+	
+		#Geral #Content #HelpBox
+		{
+			background-color:#fed6d8;
+			border:1px solid #f8c3c3;
+			padding:3px;
+			color:#ea1b23;
+			font-size:10px;
+		}
+	
+	
+		#Geral #Content #Grid
+		{
+			position:relative;
+			top:0px;
+			left:0px;
+			width:100%;
+			margin-bottom:2px;
+			font-size:12px;
+			color:#000000;
+		}
+		
+		#Geral #Content .Titulo
+		{
+			color:#999999;
+			font-size:20px;
+		}
+		
+		#Geral #Content .Linha
+		{
+			position:relative;
+			width:100%;
+			height:2px;
+			margin-bottom:5px;
+			margin-top:5px;
+		/*	background-image:url('../images/adm/linha.png');
+			background-repeat:no-repeat; */
+		}
+		
+		#Geral #Content .Toolbar
+		{
+			position:relative;
+			width:100%;
+			height:20px;
+			margin-bottom:2px;
+			background-image:url('../images/adm/bg_toolbar.png');
+			background-repeat:repeat-x;
+			text-align:right;
+
+		}
+		
+		#Geral #Content  li
+		{
+			list-style-type: none;
+			background-repeat: no-repeat;
+			display:inline;
+			margin-right:35px;
+		}
+	
+			#Geral #Content  li.Add
+			{
+				background-image: url(../images/adm/icones/ico_add.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Help
+			{
+				background-image: url(../images/adm/icones/ico_help.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Edit
+			{
+				background-image: url(../images/adm/icones/ico_edit.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Del
+			{
+				background-image: url(../images/adm/icones/ico_del.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Bullet
+			{
+				/*background-image: url(../images/adm/bullet.png);		
+				background-position: 0px 12px;
+				padding-left: 10px;*/ 
+				margin-left:20px;
+			}
+			
+		#Geral #Content a
+		{
+			font-size:10px;
+			color:#000000;
+			text-decoration:none;
+		}
+		
+		#Geral #Content a:hover
+		{
+			color:ed1c24;
+		}
+		
+		#Geral #Content .bgCinzaC
+		{
+			background-color:#CCCCCC;
+		}
+		#Geral #Content .bgCinzaC:hover
+		{
+		    background-color:#e4e4e4;
+		}
+		
+		.Name
+		{
+			width:600px;
+		}
+		
+		.Actions
+		{
+			text-align:right;
+		}
+		
+	#Geral #mensagem
+	{
+		background-color:#fed6d8;
+		border:1px solid #f8c3c3;
+		padding:12px;
+	}
+		#Geral #mensagem h2
+		{
+			color:#ea1b23;
+		}
+	
+		
+	#Geral #Footer
+	{
+		border-top:1px solid #333333;
+		color:#333333;
+		font-size:10px;
+		margin-top:10px;
+	}
+	
+.errorExplanation
+{
+	background-color:#fed6d8;
+	border:1px solid #f8c3c3;
+	padding:12px;
+}
+
+	.errorExplanation h2
+	{
+		color:#ea1b23;
+	}
+	
+	.errorExplanation p
+	{
+		color:#ea1b23;
+	}
+	
+	.errorExplanation li
+	{
+		color:#ea1b23;
+		margin-left:26px;
+	}
+
+.vermelho
+{
+	color:#ed1c24;
+}
+
+.textfield
+{
+	/*background-color:#C2C6CF;*/
+	border:1px solid #B4B8C4;
+}
+.headerReports
+{
+	color:#A21020;
+	background-color:#B1B5C1;
+	font-weight:bold;
+	padding:10px;
+}
+.tableReports
+{
+	font-family:Century Gothic, Tahoma;
+	font-size:12px;
+}
+
+.tdReports
+{
+	border:1px solid #666666;
+}
+
+.status
+{
+	vertical-align:middle;
+	margin-right:5px;
+}

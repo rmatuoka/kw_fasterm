@@ -1,0 +1,41 @@
+<%= form_for([:admin, @Case], :html => { :multipart => :true }) do |f| %>
+	<% if flash[:msg] %>
+	<div id="mensagem">
+		<h2><%=flash[:msg]%></h2>
+		<%= errors_for(@Case, "Ocorreu um erro").html_safe %>
+	</div>
+	<% end %>
+	<label>
+		Nome:<br>
+		<%=f.text_field :title %><br>
+	</label><br><br>
+	
+	<label>
+			Categoria:<br>
+			<%=f.select :category,([["Residenciais","Residenciais"],["Hoteis e Moteis","Hoteis e Moteis"],["Clubes e Academias","Clubes e Academias"],["Hospitais","Hospitais"]])%>
+		</label><br><br>
+	
+	<label>
+		Área:<br>
+		<%=f.select :area,([["Obras Primas","Obras Primas"],["Obras Importantes","Obras Importantes"]])%>
+	</label><br><br>
+	
+	<label>
+		Case:<br>
+		<%=f.text_area :body, :class => "mceEditor" %><br>
+	</label><br><br>
+	
+	<label>
+		Imagem:<br>
+		<%=f.file_field :image %><br>
+	</label><br><br>
+	
+	<label>
+		Publicado?<br>
+		<%=f.radio_button :published, 0 %> Não
+		<%=f.radio_button :published, 1 %> Sim  
+	</label><br><br>
+	
+	
+	<button type="submit">Salvar</button>
+<% end %>

@@ -1,0 +1,18 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_event_gallery_event_gallery_images_path%>">imagens</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Imagem</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_event_gallery_event_gallery_image_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3><%=@Image.title%></h3><br>
+			<img src="<%=@Image.image.url("thumb")%>"><br>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

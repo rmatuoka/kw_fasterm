@@ -1,0 +1,41 @@
+<%if flash[:msg]%>
+	<%=flash[:msg]%>
+<%end%>
+
+	<div id="Breadcrumb">
+		administração > <a href="<%=admin_cases_path%>">cases</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Cases</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_case_path%></li>
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<% @Cases.each do |l| %>
+			<tr class="bgCinzaC">
+			<td class="Name"><li class="Bullet">
+				<%
+					linkPub = "<img src='/images/adm/icones/published/"
+					linkPub += l.published.to_s
+					linkPub += ".png' border='0' class='status' />"
+				%>
+
+				<%= raw linkPub%>
+				
+				
+				<%=link_to l.title, admin_case_path(l) %></li></td>
+			<td class="Actions">
+				<li class="Edit"><%= link_to "Editar", edit_admin_case_path(l)%></li>
+				<li class="Del"><%= link_to "Excluir", admin_case_path(l), :method => :delete, :confirm => "Tem certeza?"%></li>
+				<li class="Add"><%= link_to "Imagens", admin_case_case_images_path(l)%></li>
+			</td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+		<div class="Linha"></div>
+	</div>

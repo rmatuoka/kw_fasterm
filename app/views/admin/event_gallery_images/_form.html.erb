@@ -1,0 +1,25 @@
+<%= form_for ([:admin, @EventGallery, @Image], :html => { :multipart => :true }) do |f| %>
+<% if flash[:msg] %>
+<div id="mensagem">
+	<h2><%=flash[:msg]%></h2>
+	<%= errors_for(@Image, "Ocorreu um erro").html_safe %>
+</div>
+<% end %>
+	<label>
+		Imagem:<br>
+		<%=f.file_field :image %><br>
+	</label><br><br>
+	
+	<label>
+		Título:<br>
+		<%=f.text_field :title %><br>
+	</label><br><br>
+	
+	<label>
+		Publicado?<br>
+		<%=f.radio_button :published, 0 %> Não
+		<%=f.radio_button :published, 1 %> Sim  
+	</label><br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>

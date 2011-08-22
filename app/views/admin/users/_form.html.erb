@@ -1,0 +1,25 @@
+<%= form_for([:admin, @User]) do |f| %>
+<% if flash[:msg] %>
+<div id="mensagem">
+	<h2><%=flash[:msg]%></h2>
+	<%= errors_for(@User, "Ocorreu um erro").html_safe %>
+</div>
+<% end %>
+	<label>
+		E-Mail:<br>
+		<%=f.text_field :email %><br>
+	</label><br><br>
+	
+	<label>
+		Senha:<br>
+		<%=f.text_field :password %><br>
+	</label><br><br>
+	
+	<label>
+		Repita a senha:<br>
+		<%=f.text_field :password_confirmation %><br>
+	</label><br><br>
+	<br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>

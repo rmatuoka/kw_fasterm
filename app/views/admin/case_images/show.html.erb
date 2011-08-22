@@ -1,0 +1,19 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_case_case_images_path%>">produtos</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Produto</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_case_case_image_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3><%=@CaseImage.title%></h3><br>
+			<img src="<%=@CaseImage.image.url("thumb")%>"><br>
+			<%=@CaseImage.legend%>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

@@ -1,0 +1,27 @@
+<%if flash[:msg]%>
+	<%=flash[:msg]%>
+<%end%>
+
+	<div id="Breadcrumb">
+		administração > <a href="<%=admin_home_index_path%>">home</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Bem-Vindo</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<p syle="color:#999999;">
+				Bem vindo-ao painel de administração<br>
+				<br>
+				Para navegar escolha um dos itens do menu<br>
+				<br>
+				Em caso de dúvidas, bugs ou sugestões, ligue-nos: 11 2427 8879.<br>
+				<br>
+				Ou  se preferir, nos envie um e-mail: atendimento@korewa.com.br
+			</p>
+		</div>
+		<div class="Linha"></div>
+	</div>

@@ -1,0 +1,16 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_schedule_visits_path%>">visitas agendadas</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Editar Visita</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_schedule_visit_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<%=render :partial => "form"%>
+		</div>
+		<div class="Linha"></div>
+	</div>

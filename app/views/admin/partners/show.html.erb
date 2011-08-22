@@ -1,0 +1,16 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_partners_path%>">parceiros</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Parceiros</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_partner_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3><%=@Partner.email%></h3><br>
+		</div>
+		<div class="Linha"></div>
+	</div>

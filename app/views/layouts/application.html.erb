@@ -16,10 +16,10 @@
 <div id="GeneralbgFooter">
 	<div id="General">
 		<div id="Header">
-			<div id="Contato"><a href="#">Área Restrita</a> | <a href="#">Contato</a></div>
+			<%= render :file => "layouts/_contato.html.erb"%>
 			<%= render :file => "layouts/_menu.html.erb"%>
 			<div id="Logo">
-				<a href'#'><img src='images/logo.png'></a>
+				<%= link_to image_tag('logo.png'), root_path%>
 			</div>
 		</div>
         <div id="Featured">

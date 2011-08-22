@@ -1,0 +1,19 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_notice_notice_images_path%>">imagem</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Imagem</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_notice_notice_image_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3><%=@NoticeImage.title%></h3><br>
+			<img src="<%=@NoticeImage.image.url("thumb")%>"><br>
+			<%=@NoticeImage.legend%>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

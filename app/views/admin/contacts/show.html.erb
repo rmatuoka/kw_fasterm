@@ -1,0 +1,23 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_contacts_path%>">contatos</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Contato</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_contact_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3><%=@Contact.name%></h3><br>
+			<b>E-mail:</b> <%=@Contact.email%><br>
+			<b>Telefone:</b> <%=@Contact.phone%><br>
+			<b>Empresa:</b> <%=@Contact.company%><br>
+			<b>Mensagem:</b><br>
+			<%=@Contact.message%>
+			
+		</div>
+		<div class="Linha"></div>
+	</div>
+

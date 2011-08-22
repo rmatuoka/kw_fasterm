@@ -1,0 +1,40 @@
+<%if flash[:msg]%>
+	<%=flash[:msg]%>
+<%end%>
+
+	<div id="Breadcrumb">
+		administração > <a href="<%=admin_testimonials_path%>">depoimentos</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Depoimentos</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_testimonial_path%></li>
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<% @Testimonials.each do |l| %>
+			<tr class="bgCinzaC">
+			<td class="Name"><li class="Bullet">
+				<%
+					linkPub = "<img src='/images/adm/icones/published/"
+					linkPub += l.published.to_s
+					linkPub += ".png' border='0' class='status' />"
+				%>
+
+				<%=raw linkPub%>
+				
+				
+				<%=link_to l.name, admin_testimonial_path(l) %></li></td>
+			<td class="Actions">
+				<li class="Edit"><%= link_to "Editar", edit_admin_testimonial_path(l)%></li>
+				<li class="Del"><%= link_to "Excluir", admin_testimonial_path(l), :method => :delete, :confirm => "Tem certeza?"%></li>
+			</td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+		<div class="Linha"></div>
+	</div>

@@ -1,0 +1,17 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=admin_dynamic_pages_path%>">páginas dinâmicas</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Nova Página Dinâmica</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_admin_dynamic_page_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<%=render :partial => "form" %>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

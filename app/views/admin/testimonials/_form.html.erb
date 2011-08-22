@@ -1,0 +1,41 @@
+<% form_for([:admin, @Testimonial], :html => { :multipart => :true }) do |f| %>
+<% if flash[:msg] %>
+<div id="mensagem">
+	<h2><%=flash[:msg]%></h2>
+	<%= errors_for(@EventGallery, "Ocorreu um erro").html_safe %>
+</div>
+<% end %>
+	<label>
+		Nome:<br>
+		<%=f.text_field :name %><br>
+	</label><br><br>
+	
+	<label>
+		Cargo:<br>
+		<%=f.text_field :position %><br>
+	</label><br><br>
+	
+	<label>
+		Empresa:<br>
+		<%=f.text_field :company %><br>
+	</label><br><br>
+	
+	<label>
+		Depoiento:<br>
+		<%=f.text_area :testimonial, :class =>"mceEditor" %><br>
+	</label><br><br>
+	
+	<label>
+		Imagem:<br>
+		<%=f.file_field :image %><br>
+	</label><br><br>
+	
+	<label>
+		Publicado?<br>
+		<%=f.radio_button :published, 0 %> Não
+		<%=f.radio_button :published, 1 %> Sim  
+	</label><br><br>
+	
+	
+	<button type="submit">Salvar</button>
+<% end %>

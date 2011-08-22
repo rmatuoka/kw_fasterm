@@ -83,6 +83,6 @@ DEPENDENCIES
   browser
   mail
   mongrel
-  mysql2
+  mysql2 (< 0.3)
   nifty-generators
   rails (= 3.0.3)

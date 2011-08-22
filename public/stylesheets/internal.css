@@ -5,7 +5,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
@@ -90,7 +90,12 @@ body
 		width:1000px;
 		min-height:162px;
 		margin:auto;
+		z-index:3000;
 	}
+	#Logo{
+		margin-top:10px;
+		margin-left:50px;
+		}
 		#Contato
 		{
 			width:180px;
@@ -261,7 +266,7 @@ body
 		#Featured #Carousel_freatured 
 		{
 			position:relative;
-			top:-13px;
+			top:-23px;
 			*left:11px;
 			left:12px;
 			width:768px;
@@ -296,7 +301,7 @@ body
 				color:#e13f20;
 				margin-left:-25px;	
 			}
-			.Text_internal_p
+			#Box_text_internal p
 			{
 				font-family:Verdana, Geneva, sans-serif;
 				font-size:12px;
@@ -304,6 +309,11 @@ body
 				color:#5b5b5b;
 				text-align:justify;
 				width:850px;			
+			}
+			#Box_text_internal img
+			{
+				float:right;
+				margin: 0px 140px 10px 11px;
 			}
 		label_orange
 		{

@@ -1,0 +1,16 @@
+		<%= stylesheet_link_tag "eggplant/jquery-ui-1.8.custom.css"%>
+		<%= javascript_include_tag "jquery-ui-1.8.custom.min.js" %>
+		<script type="text/javascript">
+			jQuery(function(){
+
+				// Datepicker
+				jQuery('#event_date_start').datepicker({
+					inline: true
+				});
+				
+				jQuery('#event_date_end').datepicker({
+					inline: true
+				});
+				
+			});
+		</script>

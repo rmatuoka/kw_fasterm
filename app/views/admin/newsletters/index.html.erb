@@ -1,0 +1,30 @@
+<%if flash[:msg]%>
+	<%=flash[:msg]%>
+<%end%>
+
+	<div id="Breadcrumb">
+		administração > <a href="<%=admin_newsletters_path%>">newsletters</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">E-Mails Cadastrados</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Exportar" , export_admin_newsletters_path%></li>
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<% @Newsletters.each do |n| %>
+			<tr class="bgCinzaC">
+			<td class="Name"><li class="Bullet">
+				<%=link_to n.email, admin_newsletter_path(n) %></li></td>
+			<td class="Actions">
+				<li class="Del"><%= link_to "Excluir", admin_newsletter_path(n), :method => :delete, :confirm => "Tem certeza?"%></li>
+			</td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+		<div class="Linha"></div>
+	</div>

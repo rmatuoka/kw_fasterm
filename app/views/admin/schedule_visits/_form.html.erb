@@ -1,0 +1,50 @@
+<% form_for([:admin, @ScheduleVisit]) do |f| %>
+<% if flash[:msg] %>
+<div id="mensagem">
+	<h2><%=flash[:msg]%></h2>
+	<%= errors_for(@ScheduleVisit, "Ocorreu um erro").html_safe %>
+</div>
+<% end %>
+	<label>
+		Nome:<br>
+		<%=f.text_field :name %><br>
+	</label><br><br>
+	
+	<label>
+		E-mail:<br>
+		<%=f.text_field :email %><br>
+	</label><br><br>
+	
+	<label>
+		Telefone:<br>
+		<%=f.text_field :phone %><br>
+	</label><br><br>
+	
+	<label>
+		Endereço:<br>
+		<%=f.text_field :adress %>
+	</label>
+	
+	<label>
+		N.:
+		<%=f.text_field :number %><br>
+	</label><br><br>
+	
+	<label>
+		Cep:<br>
+		<%=f.text_field :postalcode %><br>
+	</label><br><br>
+	
+	<label>
+		Cidade:<br>
+		<%=f.text_field :city %><br>
+	</label><br><br>
+	
+	<label>
+		Estado:<br>
+		<%=f.text_field :state %><br>
+	</label><br><br>
+	
+	
+	<button type="submit">Salvar</button>
+<% end %>
