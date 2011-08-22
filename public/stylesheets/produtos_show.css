@@ -93,6 +93,15 @@
 				color:#5b5b5b;
 				text-align:left;
 				width:720px;
+			}
+			
+			.Text_line p
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#5b5b5b;
+				text-align:left;
 			}						
 	.Buttons_line
 	{

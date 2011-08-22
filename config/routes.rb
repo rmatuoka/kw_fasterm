@@ -65,7 +65,9 @@ KwFasterm::Application.routes.draw do
   resources :produtos
   resources :noticias
   resources :newsletters
-  resources :linhas
+  resources(:linhas){
+    resources :categorias
+  }
   resources :instalacao
   resources :imprensa
   resources :hoteleiros
