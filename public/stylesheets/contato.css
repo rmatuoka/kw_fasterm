@@ -15,7 +15,8 @@
 	 position:relative;
 	 float:left;
 	 width:455px;
-	 height:395px; 
+	 min-height:395px;
+	 height:auto; 
  }
 	 #input_bg_field
 	 {
@@ -70,7 +71,8 @@
 	 position:relative;	 
 	 float:left;
 	 width:455px;
-	 height:395px;	
+	 min-height:395px;
+	 height:auto;
 	 margin-left:80px;
  }
 	  #Contato_boxright .bt_align_contato

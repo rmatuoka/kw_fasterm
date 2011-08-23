@@ -1,2 +1,31 @@
-<h1>Sitecontacts#new</h1>
-<p>Find me in app/views/sitecontacts/new.html.erb</p>
+<%content_for :title do%>
+	Contato
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "contato" %>	
+<%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_contato.png")%>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id="Line_box">
+			<%= form_for(@Contato) do |f| %>
+			<h1 class="Title_internal_h1"><%= image_tag("tit_contato.png", :width=>"112", :height=>"17")%></h1><br />
+			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>		
+			<div id="Contato_boxleft">
+				<label>Nome:</label><div id="input_bg_field"><%=f.text_field :name, :class => "input_field"%></div><br />
+				<label>E-Mail:</label><div id="input_bg_field"><%=f.text_field :email, :class => "input_field"%></div><br />
+				<label>Telefone:</label><div id="input_bg_field"><%=f.text_field :phone, :class => "input_field"%></div><br />
+				<label>Empresa:</label><div id="input_bg_field"><%=f.text_field :company, :class => "input_field"%></div><br />
+				<label>Cidade:</label><div id="input_bg_field"><%=f.text_field :city, :class => "input_field"%></div><br />
+				<label>Estado:</label><div id="input_bg_field"><%=f.text_field :state, :class => "input_field"%></div><br />
+			</div>
+			<div id="Contato_boxright">
+				<label>Mensagem:</label><div id="input_bg_message"><%=f.text_area(:message, :class=>"input_message")%></div><br />
+				<%=link_to image_tag("bt_enviar_contato.png", :width=>"100" , :height=>"37"),"#" , :class=>"bt_align_contato"  %>
+			</div>
+			<% end %>	
+		</div>	
+	</div>
+</div>
