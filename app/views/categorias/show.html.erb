@@ -48,7 +48,7 @@
 				<div class="Buttons_line">
 					
 					<%if p.pdf.exists?%>
-						<%=link_to image_tag("bt_informacoes_técnicas.png", :width=>"174" ,:height=>"23"), p.pdf.url%>
+						<%=link_to image_tag("bt_informacoes_técnicas.png", :width=>"174" ,:height=>"23"), p.pdf.url,:target=>"_blank"%>
 					<%end%>
 
 					
