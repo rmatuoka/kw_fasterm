@@ -4,6 +4,9 @@
 <%content_for :head do %>
 	<%= stylesheet_link_tag "produtos" %>
 <%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_busines.png")%>
+<%end%>
 <div id="Content">
 	<div id="Box_content_internal">
 		<div id="Line_box">
@@ -16,12 +19,11 @@
 			<div id="Solar_line">
 				<%=link_to image_tag("img_solar_line.png", :width=>"256", :height=>"516"),linha_categoria_path(10,6)%>
 			</div>
-			<div id="Field_line">
-			<p>CONHEÇA OS<br /><br />
-				ESQUEMAS <br /><br />
-				DE INSTALAÇÃO<br /><br />
-				<%=image_tag("img_detail_rightlinhas.png", :width=>"188", :height=>"139" ,:class=>"Detail_align")%>
-			</p>
+			
+			<div id="Field_line">				
+			<%=link_to raw("<p>CONHEÇA OS<br /><br />ESQUEMAS <br /><br />DE INSTALAÇÃO<br /><br /></p>"), esquemas_path %>
+			<%=image_tag("img_detail_rightlinhas.png", :width=>"188", :height=>"139" ,:class=>"Detail_align")%>
+			
 			</div>			
 		</div>	
 	</div>

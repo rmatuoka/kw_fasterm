@@ -1,0 +1,2 @@
+class EsquemasController < ApplicationController
+end

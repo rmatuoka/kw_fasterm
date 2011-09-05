@@ -44,6 +44,14 @@
 		top:20px;
 		left:20px;
 	}
+		#Field_line a
+		{
+			text-decoration:none;
+		}	
+		#Field_line a:hover
+		{
+		text-decoration:underline;
+		}			
 		#Field_line p
 		{
 			position:absolute;
@@ -59,4 +67,5 @@
 			position:absolute;
 			top:-35px;
 			left:0px;
+			z-index:-100;
 		}
