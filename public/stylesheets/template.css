@@ -303,6 +303,19 @@ body
 			margin-left:10px;
 		}
 		
+		.Box_content_noticias_left
+		{
+			position:relative;
+			width:650px;
+			min-height:370px;
+			float:left;
+			display:block;
+			*width:311px;
+			*float:left;
+			*display:block;
+			text-align:center;
+		}		
+		
 		.label_orange
 		{
 			font-family:Verdana, Geneva, sans-serif;
@@ -354,7 +367,7 @@ body
 			position:relative;
 			width:330px;
 			min-height:360px;
-			float:left;
+			float:right;
 			display:block;
 			*width:331px;
 			*float:left;
@@ -437,10 +450,7 @@ body
 			color:#333333;
 			line-height:18px;
 		}
-		
-		#Noticias{
-			margin-top:-130px;
-			}								
+							
 #Footer
 	{
 		position:relative;
