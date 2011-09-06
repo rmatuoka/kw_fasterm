@@ -9,7 +9,19 @@
 		<div id="Box_show">
 		<div id="Title_div">
 			<span class="Text_span">Linha</span><br />
-			<h1 class="Title_h1"><img src="/images/tit_busines.png" width="118" height="17"></h1>
+			<h1 class="Title_h1">
+				<% 
+					case @Section.id.to_s
+						when "8"
+							$img = '<img src="/images/tit_home_busines.png" >'
+						when "9"
+							$img = '<img src="/images/tit_busines.png" >'
+						when "10"
+							$img = '<img src="/images/tit_solar_busines.png" >'
+					end
+				%>
+				<%= raw $img%>
+			</h1>
 		</div>			
 			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>
 			
