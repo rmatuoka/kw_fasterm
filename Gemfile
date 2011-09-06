@@ -10,6 +10,7 @@ gem "nifty-generators", :group => :development
 gem 'mail'
 gem 'mongrel'
 gem "browser"
+gem "paperclip", "~> 2.4"
 
 # Use unicorn as the web server
 # gem 'unicorn'

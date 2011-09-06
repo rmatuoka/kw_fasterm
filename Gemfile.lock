@@ -32,6 +32,7 @@ GEM
     browser (0.1.2)
     builder (2.1.2)
     cgi_multipart_eof_fix (2.5.0)
+    cocaine (0.2.0)
     daemons (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -51,6 +52,11 @@ GEM
       gem_plugin (>= 0.2.3)
     mysql2 (0.2.7)
     nifty-generators (0.4.6)
+    paperclip (2.4.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     polyglot (0.3.1)
     rack (1.2.2)
     rack-mount (0.6.14)
@@ -85,4 +91,5 @@ DEPENDENCIES
   mongrel
   mysql2 (< 0.3)
   nifty-generators
+  paperclip (~> 2.4)
   rails (= 3.0.3)
