@@ -1,3 +1,5 @@
+ ENV['GEM_PATH'] = '/home/fasterm/.gems'
+ 
 # Load the rails application
 require File.expand_path('../application', __FILE__)
 

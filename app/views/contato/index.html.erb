@@ -1,28 +1,10 @@
-<%content_for :title do%>
-	Contato
-<%end%>
-<%content_for :head do %>
-	<%= stylesheet_link_tag "contato" %>	
-<%end%>
-<%content_for :featured_image do %>
-	<%= image_tag("img_freatured_contato.png")%>
-<%end%>
-<div id="Content">
-	<div id="Box_content_internal">
-		<div id="Line_box">
-			<h1 class="Title_internal_h1"><img src="images/tit_contato.png" width="112" height="17"></h1><br />
-			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>		
-			<div id="Contato_boxleft">
-				<label>Nome:</label><div id="input_bg_field"><input type="text" name="Nome" class="input_field" /></div><br />
-				<label>E-Mail:</label><div id="input_bg_field"><input type="text" name="Nome" class="input_field" /></div><br />
-				<label>Empresa:</label><div id="input_bg_field"><input type="text" name="Nome" class="input_field" /></div><br />
-				<label>Cidade:</label><div id="input_bg_field"><input type="text" name="Nome" class="input_field" /></div><br />
-				<label>Estado:</label><div id="input_bg_field"><input type="text" name="Nome" class="input_field" /></div><br />
-			</div>
-			<div id="Contato_boxright">
-				<label>Mensagem:</label><div id="input_bg_message"><textarea name="Mensagem" class="input_message" /></textarea></div><br />
-				<%=link_to image_tag("bt_enviar_contato.png", :width=>"100" , :height=>"37"),"#" , :class=>"bt_align_contato"  %>
-			</div>	
-		</div>	
-	</div>
+<% 
+       	@feed = RssParser.run("http://twitter.com/statuses/public_timeline.rss")
+        @feed1 = @feed[:items][0]
+        @tweets = [@feed1]
+ %>
+<% @tweets.each do |tweet| %>
+<div class='tweet' id='spy-item-<%= tweet[:link] -%>'>
+	<%= tweet[:description] %>
 </div>
+<% end %>
