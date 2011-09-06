@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   layout "home"
   
   def index
-
+    @Highlights = Highlight.find(:all, :conditions=>[' published = 1'], :order => '`order`')
   end
 end

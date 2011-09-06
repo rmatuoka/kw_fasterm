@@ -8,6 +8,16 @@
 <script>
 	jQuery.noConflict();
 </script>	
+<%= javascript_include_tag "jquery.cycle.all.min" %>
+<script>
+jQuery(document).ready(function() {	
+	jQuery('#Carousel_freatured').cycle({
+		fx: 'fade',
+		speed: 3500,
+		timeout: 10000
+	});
+});
+</script>
 <%=csrf_meta_tag %>
 <%= stylesheet_link_tag "template" %>
 </head>
@@ -24,7 +34,12 @@
 		</div>
 		<div id="Featured">
 			<div id="Carousel_freatured">
-				<img src="images/destaque.jpg" width="798" height="325"/>
+				<% @Highlights.each do |destaque|%>
+				<div>
+					<%= link_to image_tag(destaque.image.url), destaque.link%>
+					<!--img src="images/destaque.jpg" width="798" height="325"/-->
+				</div>
+				<% end %>
 			</div>		
 		</div>
 		<div id="Content">
