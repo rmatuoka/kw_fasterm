@@ -1,2 +1,50 @@
-<h1>Simulations#index</h1>
-<p>Find me in app/views/simulations/index.html.erb</p>
+<%content_for :title do%>
+	Simulador
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "simulador" %>
+<%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_busines.png")%>
+<%end%>
+<div id="Content">
+	<br /><br />
+	<%=image_tag("tit_bemvindoaosimulador.png", :width=>"526", :height=>"14")%><br /><br />
+	<%=image_tag("img_line_detailinternal.png", :width=>"867", :height=>"7") %>
+	<div id="Ask_field">
+		<span class="Tit_font_sim_gray">Qual é o tipo do seu empreendimento ?</span>
+		<br /><br />
+			<ul>
+				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />HOTEL</li>
+				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />MOTEL</li>
+				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />HOSPITAL</li>
+				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />ACADEMIA</li>
+			</u>
+			<br />
+		<span class="Tit_font_sim_blue">Qual e o número de apartamentos de seu Hotel ?</span>
+		<br /><br />
+		<input type="text" name="numeroitems" class="Itminput_font_sim_gray" />
+		<br /><br />
+		<span class="Tit_font_sim_blue">Quantos Leitos?</span>
+		<br /><br />
+		<input type="text" name="numeroitems" class="Itminput_font_sim_gray" />
+		<br /><br />
+		<span class="Tit_font_sim_blue">Qual é a taxa de ocupação ?</span>
+		<br /><br />
+		<input type="text" name="numeroitems" class="Itminput_font_sim_gray" />
+		<br /><br />
+			<span class="Tit_font_sim_gray">Que tipo de energia é utilizada ?</span>
+			<br /><br />
+			<ul>
+				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />GPL</li>
+				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />DIESEL</li>
+				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />GASOLINA</li>
+			</u>
+	    <%=link_to image_tag("bt_enviar_simulator.png", :width=>"100", :height=>"37",:class=>"Bt_align_sim"),"#" %>
+		<%=image_tag("img_economicgraph.jpg", :width=>"334", :height=>"179" ,:class=>"Sim_img_align")%>
+	</div>
+	
+	<br /><br /><br />
+
+
+</div>

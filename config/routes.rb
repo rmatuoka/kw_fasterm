@@ -80,6 +80,7 @@ KwFasterm::Application.routes.draw do
   resources :contato
   resources :busca
   resources :esquemas
+  resources :simulations
   resources :home do
     collection do
       get :atualizar

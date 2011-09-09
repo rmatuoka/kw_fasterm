@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+#Result_field
+{
+    position:relative;
+	width:502px;
+	height:250px;
+	background-image:url(../images/bg_result_simulator.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	
+}
+#Ask_field
+{
+    position:relative;
+	width:480px;
+	height:100px;
+}
+.Bt_align_sim
+{
+float:right;
+}
+.Sim_img_align
+{
+	position:absolute;
+	top:0px;
+	left:528px;
+	float:right;
+}
+.Tit_font_sim_gray
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;	
+	color:#666666;
+	font-weight:normal;
+}
+.Tit_font_sim_blue
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;	
+	color:#006699;
+	font-weight:normal;
+}
+.Itmchck_font_sim_gray
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;	
+	color:#666666;
+	font-weight:normal;
+}
+.Itminput_font_sim_gray
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;	
+	color:#666666;
+	font-weight:normal;
+}
+.Itmrsult_font_redsmall
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:25px;	
+	color:#990000;
+	font-weight:normal;
+}
+.Itmrsult_font_redbig
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:50px;	
+	color:#990000;
+	font-weight:normal;
+	text-align:center;
+	width:502px;
+	height:20px;	
+}
+.Itmrsult_font_gray
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;	
+	color:#666666;
+	font-weight:normal;
+	text-align:center;
+	width:502px;
+	height:20px
+}
