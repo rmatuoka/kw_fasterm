@@ -66,7 +66,11 @@ KwFasterm::Application.routes.draw do
   resources :noticias
   resources :newsletters
   resources(:linhas){
-    resources :categorias
+    resources :categorias do
+      collection do
+        get "embreve"
+      end
+    end
   }
   resources :instalacao
   resources :imprensa

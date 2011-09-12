@@ -5,8 +5,10 @@ class CategoriasController < ApplicationController
     
     @Categoria = @Section.categories.find(params[:id])
     
-    @Produtos = @Categoria.products.find(:all, :conditions => ['published = 1'])
-    
+    @Produtos = @Categoria.products.find(:all, :conditions => ['published = 1'])   
+  end
+  
+  def embreve
     
   end
 
