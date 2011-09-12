@@ -20,11 +20,7 @@
 			<div id='img_content_cases'>
 				<ul>
 					<% @Imagens.each do |img|%>
-						<li><%= lightbox_image_tag(img.image.url("thumb"), img.image.url("c_medio"), {:class=>"images"}, :title => img.title, :rel=>"lightbox[noticias]") %></li>
-					<!-- <a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
-					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
-					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
-					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>-->
+						<li class="img_cases_li"><%= lightbox_image_tag(img.image.url("thumb"), img.image.url("c_medio"), {:class=>"images"}, :title => img.title, :rel=>"lightbox[noticias]") %></li>
 					<% end %>
 				</ul>
 			</div>
