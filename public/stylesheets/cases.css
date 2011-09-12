@@ -49,9 +49,12 @@ a{
 
 .itens_cases{
 	width:160px;
-	height:160px;
-	margin: 10px -20px 10px 50px;
+	height:auto;
 	float:left;
+	margin:0px 10px 20px 0px;
+	}
+	.img_itens_cases{
+		text-align:center;
 	}
 
 p{
@@ -72,16 +75,26 @@ p{
 	width:940px;
 	margin-left:30px;
 	}
+#text_content_cases h1{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	color:#2f4b2f;
+	margin:15px 0px 25px 0px;
+	}	
 
 #img_content_cases ul{
 	 margin-left:130px;
 	 margin-top:20px;
 	}
 
-#img_content_cases ul a li{
+#img_content_cases ul li{
 	display:inline;
 	margin-left:10px;
 	}
+.showboxcases{
+	height:auto;
+	margin-left:50px;
+}
 
 .hide{
 	display:none;
