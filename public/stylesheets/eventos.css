@@ -47,6 +47,14 @@
 	vertical-align: middle;
 	float:right;
 	margin-right:4px;
+	height: 22px;
+	width: 23px;
+}
+.evt_mais{
+	background:url(../images/bt_mais.png) left top no-repeat;
+}
+.evt_menos{
+	background:url(../images/bt_menos.png) left top no-repeat;
 }
 
 #eventos_mais *{
@@ -62,4 +70,14 @@ vertical-align: middle;
 	margin-top:10px;
 	width:900px;
 	margin-left:10px;
+}
+.body_eventos{
+	margin:30px 0px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#5b5b5b;
+	width:900px;
+}
+.hide{
+	display:none;
 }
