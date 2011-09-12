@@ -14,13 +14,12 @@
 			<img src='../images/tit_cases.png'>
 		</div>
 		<div id='Content_cases'>
-			<ul>
-				<%	$i = 0
+					<%	$i = 0
 					$atual = ""
 					@Cases.each do |cases|
 				%>
 					<% if $atual != cases.category %>	
-						<% if $atual == 0%>		
+						<% if $atual == ""%>		
 							<li class='tit_case_mais' onclick="show_session(<%= $i %>, this)"><%= cases.category%></li>
 							<div id='box_cases<%= $i %>' class='hide showboxcases'>
 								<a href='<%= case_path(cases.id)%>'>
@@ -54,11 +53,11 @@
 						<% $atual = cases.category %>
 					<% end
 					end%>
-			</ul>
 			<br>
 			<br>
 			<br>
 			<br>
+			<div id='divclear'></div>
 		</div>
 	</div>
 </div>

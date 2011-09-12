@@ -1,6 +1,13 @@
+#Box_content_internal{
+	float:none !important;
+	min-height
+}
 #Content_cases{
 	margin-bottom:10px;
 	}
+	#Content_cases li{
+		list-style:none;;
+		}	
 	
 #tit_internal{
 	background:url(../images/bg_tit.png);
@@ -83,13 +90,13 @@ p{
 	}	
 
 #img_content_cases ul{
-	 margin-left:130px;
+	 margin-left:30px;
 	 margin-top:20px;
 	}
 
 #img_content_cases ul li{
 	display:inline;
-	margin-left:10px;
+	margin-right:10px;
 	}
 .showboxcases{
 	height:auto;
@@ -99,3 +106,6 @@ p{
 .hide{
 	display:none;
 	}
+#Footer{
+	margin-top:0px !important;
+}

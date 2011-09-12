@@ -3,6 +3,7 @@
 <%end%>
 <%content_for :head do %>
 	<%= stylesheet_link_tag "eventos" %>
+	<%=javascript_include_tag "showeventos.js"%>	
 <%end%>
 <%content_for :featured_image do %>
 	<%= image_tag("img_freatured_eventos.png")%>
@@ -10,48 +11,40 @@
 <div id="Content">
 	<div id="Box_content_internal">
 		<div id='tit_internal'>
-			<img src='../images/tit_eventos.png'>
+			<%= image_tag("tit_eventos.png")%>
 		</div>
 		<div id='Content_eventos'>
 			<div id='eventos_border'>
-				<img src='../images/bg_tit.png'>
-			</div>
+				<%= image_tag("bg_tit.png")%>
+			</div>	
 			
+			<%	$i = 0 
+				@Eventos.each do | eventos |%>
 			<div id='eventos_corpo'>
 				<div id='eventos_imagem'>
-					<img src='../images/img_evento.jpg'>
+					<%= image_tag(eventos.image.url("home_evt"))%>
 				</div>
 				<div id='eventos_texto'>
-					<h1>25/05/2011</h1>
-					<h2>HOSPITALAR 2010, 17ª FEIRA INTERNACIONAL DE PRODUTOS, EQUIPAMENTOS, SERVIÇOS E TECNOLOGIA.</h2>
+					<h1><%= eventos.date_start.to_date.strftime("%d/%m/%Y") %></h1>
+					<h2><%= eventos.title%></h2>
 				</div>
-				<div id='eventos_mais'>
-					<a href='#'><img src='../images/bt_mais.png'></a>
-				</div>
-				<div id='divclear'></div>
-			</div>
-			<div id='eventos_border'>
-				<img src='../images/bg_tit.png'>
-			</div>
-			
-			<!-- 
-			<div id='eventos_corpo'>
-				<div id='eventos_imagem'>
-					<img src='../images/img_evento.jpg'>
-				</div>
-				<div id='eventos_texto'>
-					<h1>25/05/2011</h1>
-					<h2>HOSPITALAR 2010, 17ª FEIRA INTERNACIONAL DE PRODUTOS, EQUIPAMENTOS, SERVIÇOS E TECNOLOGIA.</h2>
-				</div>
-				<div id='eventos_mais'>
-					<a href='#'><img src='../images/bt_mais.png'></a>
+				<div id='eventos_mais' class="evt_mais" onclick="show_eventos(<%= $i %>, this)">
+					
 				</div>
 				<div id='divclear'></div>
+				<div id="eventos_body<%= $i %>" class="hide body_eventos">
+						De: <%=eventos.date_start.to_date.strftime("%d/%m/%Y")%><br>
+						Até: <%=eventos.date_end.to_date.strftime("%d/%m/%Y")%><br>
+						<br>
+						<br>
+						<%= raw eventos.description%>
+				</div>
 			</div>
 			<div id='eventos_border'>
-				<img src='../images/bg_tit.png'>
+				<%= image_tag("bg_tit.png")%>
 			</div>
-				-->
+			<% 	$i += 1
+				end %>
 		</div>
 	</div>
 </div>
