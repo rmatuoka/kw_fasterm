@@ -14,105 +14,51 @@
 			<img src='../images/tit_cases.png'>
 		</div>
 		<div id='Content_cases'>
-			<ul>			
-				<li class='tit_case_menos' onclick="show_session(1, this)">Clubes e Academias</li>
-				<div id='box_cases1' class='hide'>				
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>,
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-				</div>
-				
-				<div id='divclear'></div>
-				<li class='tit_case_menos' onclick="show_session(2, this)">Hospitais</li>
-				<div id='box_cases2' class='hide'>				
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>,
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-				</div>
-				
-				<div id='divclear'></div>
-				<li class='tit_case_menos' onclick="show_session(3, this)">Hoteis e Moteis</li>
-				<div id='box_cases3' class='hide'>				
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>,
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-				</div>
-				
-				<div id='divclear'></div>
-				<li class='tit_case_menos' onclick="show_session(4, this)">Residenciais</li>
-				<div id='box_cases4' class='hide'>				
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>,
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-					<a href='#'>
-						<div class='itens_cases'>
-							<img src='../images/img_cases.png'>
-							<p>Academia Wave em Balneário Camburiú - SC</p>
-						</div>
-					</a>
-				</div>
-				
-				<div id='divclear'></div>
+			<ul>
+				<%	$i = 0
+					$atual = ""
+					@Cases.each do |cases|
+				%>
+					<% if $atual != cases.category %>	
+						<% if $atual == 0%>		
+							<li class='tit_case_mais' onclick="show_session(<%= $i %>, this)"><%= cases.category%></li>
+							<div id='box_cases<%= $i %>' class='hide showboxcases'>
+								<a href='<%= case_path(cases.id)%>'>
+									<div class='itens_cases'>
+										<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
+										<p><%= cases.title%></p>
+									</div>
+								</a>
+							<% $atual = cases.category %>
+						<% else %>
+							</div>
+							<div id='divclear'></div>
+							<% $i += 1 %>
+							<li class='tit_case_mais' onclick="show_session(<%= $i %>, this)"><%= cases.category%></li>
+							<div id='box_cases<%= $i %>' class='hide showboxcases'>	
+									<a href='<%= case_path(cases.id)%>'>
+										<div class='itens_cases'>
+											<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
+											<p><%= cases.title%></p>
+										</div>
+									</a>
+								<% $atual = cases.category %>
+						<%end%>
+					<% else %>
+							<a href='<%= case_path(cases.id)%>'>
+								<div class='itens_cases'>
+									<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
+									<p><%= cases.title%></p>
+								</div>
+							</a>
+						<% $atual = cases.category %>
+					<% end
+					end%>
 			</ul>
 			<br>
 			<br>
 			<br>
 			<br>
 		</div>
-		
 	</div>
 </div>

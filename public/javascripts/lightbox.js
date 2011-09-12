@@ -487,7 +487,7 @@ Lightbox.prototype = {
 		// if image is part of set display 'Image x of x' 
 		if(imageArray.length > 1){
 			Element.show('numberDisplay');
-			Element.setInnerHTML( 'numberDisplay', "Image " + eval(activeImage + 1) + " of " + imageArray.length);
+			Element.setInnerHTML( 'numberDisplay', "Imagem " + eval(activeImage + 1) + " de " + imageArray.length);
 		}
 
 		new Effect.Parallel(
@@ -558,14 +558,14 @@ Lightbox.prototype = {
 
 		key = String.fromCharCode(keycode).toLowerCase();
 		
-		if((key == 'x') || (key == 'o') || (key == 'c') || (keycode == escapeKey)){	// close lightbox
+		if((key == 'x') || (key == 'f') || (key == 'c') || (keycode == escapeKey)){	// close lightbox
 			myLightbox.end();
-		} else if((key == 'p') || (keycode == 37)){	// display previous image
+		} else if((key == 'n') || (keycode == 37)){	// display previous image
 			if(activeImage != 0){
 				myLightbox.disableKeyboardNav();
 				myLightbox.changeImage(activeImage - 1);
 			}
-		} else if((key == 'n') || (keycode == 39)){	// display next image
+		} else if((key == 'r') || (keycode == 39)){	// display next image
 			if(activeImage != (imageArray.length - 1)){
 				myLightbox.disableKeyboardNav();
 				myLightbox.changeImage(activeImage + 1);

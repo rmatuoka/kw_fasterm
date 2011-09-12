@@ -5,7 +5,7 @@
 	<%= stylesheet_link_tag "cases" %>
 <%end%>
 <%content_for :featured_image do %>
-	<img src='images/img_freatured_produto.png'>
+	<%= image_tag("img_freatured_cases.png")%>
 <%end%>
 <div id="Content">
 	<div id="Box_content_internal">
@@ -14,16 +14,18 @@
 		</div>
 		<div id='Content_cases'>
 			<div id='text_content_cases'>
-			<p>Nosso principal objetivo é oferecer a nossos clientes as soluções adequadas e mais eficazes de acordo com a necessidade de cada instalação. Para isso, fazemos um estudo detalhado das condições de cada estabelecimento e apresentamos a nossos clientes os equipamentos que mais atendem às exigências do ambiente.<br><br>
-Desse modo, nossos clientes têm sempre à sua disposição ótimos equipamentos com a garantia dos melhores desempenhos associados aos melhores serviços. Nossos cientes são nossa prioridade e fazer com que eles estejam sempre satisfeitos é nossa meta diária.<br><br>
-Nós entendemos que cada cliente tem uma necessidade específica e é por isso que trabalhamos com seriedade e empenho, buscando sempre os melhores resultados para nossos clientes.</p>
+				<h1><%= @Case.title%></h1>
+				<%= raw @Case.body%>
 			</div>
 			<div id='img_content_cases'>
 				<ul>
+					<% @Imagens.each do |img|%>
+						<li><%= lightbox_image_tag(img.image.url("thumb"), img.image.url("c_medio"), {:class=>"images"}, :title => img.title, :rel=>"lightbox[noticias]") %></li>
+					<!-- <a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
 					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
 					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
-					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
-					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>
+					<a href='#'><li><img src='../images/img_cases_thumb.png'></li></a>-->
+					<% end %>
 				</ul>
 			</div>
 			<br>
