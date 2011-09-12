@@ -3,11 +3,54 @@
 <%end%>
 <%content_for :head do %>
 	<%= stylesheet_link_tag "simulador" %>
+	
+	<script>
+	jQuery(document).ready(function(){
+		jQuery('#empreendimento_1').click(function(){
+			//jQuery("#Hotel").show();
+			jQuery("#Hotel").slideDown('slow');
+
+			jQuery("#Motel").slideUp('slow');
+			jQuery("#Hospital").slideUp('slow');
+			jQuery("#Academia").slideUp('slow');
+		});
+
+		jQuery('#empreendimento_2').click(function(){
+			//jQuery("#Hotel").show();
+			jQuery("#Motel").slideDown('slow');
+
+			jQuery("#Hotel").slideUp('slow');
+			jQuery("#Hospital").slideUp('slow');
+			jQuery("#Academia").slideUp('slow');
+		});
+
+		jQuery('#empreendimento_3').click(function(){
+			//jQuery("#Hotel").show();
+			jQuery("#Hospital").slideDown('slow');
+
+			jQuery("#Hotel").slideUp('slow');
+			jQuery("#Motel").slideUp('slow');
+			jQuery("#Academia").slideUp('slow');
+		});
+
+		jQuery('#empreendimento_4').click(function(){
+			//jQuery("#Hotel").show();
+			jQuery("#Academia").slideDown('slow');
+
+			jQuery("#Hotel").slideUp('slow');
+			jQuery("#Motel").slideUp('slow');
+			jQuery("#Hospital").slideUp('slow');
+		});
+
+	});
+	</script>
+	
 <%end%>
 <%content_for :featured_image do %>
 	<%= image_tag("img_freatured_busines.png")%>
 <%end%>
 <div id="Content">
+<%=form_tag "/simulations", :method => :post%>	
 	<br /><br />
 	<%=image_tag("tit_bemvindoaosimulador.png", :width=>"526", :height=>"14")%><br /><br />
 	<%=image_tag("img_line_detailinternal.png", :width=>"867", :height=>"7") %>
@@ -15,36 +58,62 @@
 		<span class="Tit_font_sim_gray">Qual é o tipo do seu empreendimento ?</span>
 		<br /><br />
 			<ul>
-				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />HOTEL</li>
-				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />MOTEL</li>
-				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />HOSPITAL</li>
-				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />ACADEMIA</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "1"%> HOTEL</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "2"%> MOTEL</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "3"%> HOSPITAL</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "4"%> ACADEMIA</li>
 			</u>
 			<br />
-		<span class="Tit_font_sim_blue">Qual e o número de apartamentos de seu Hotel ?</span>
-		<br /><br />
-		<input type="text" name="numeroitems" class="Itminput_font_sim_gray" />
-		<br /><br />
-		<span class="Tit_font_sim_blue">Quantos Leitos?</span>
-		<br /><br />
-		<input type="text" name="numeroitems" class="Itminput_font_sim_gray" />
-		<br /><br />
-		<span class="Tit_font_sim_blue">Qual é a taxa de ocupação ?</span>
-		<br /><br />
-		<input type="text" name="numeroitems" class="Itminput_font_sim_gray" />
-		<br /><br />
+			
+			<div id="Hotel" style="display:none;">
+
+				<span class="Tit_font_sim_blue">Qual e o número de apartamentos de seu Hotel ?</span>
+				<br /><br />
+				<%=text_field_tag :n_apartamentos_hotel, nil, :class => "Itminput_font_sim_gray"%>
+
+				<br /><br />
+				<span class="Tit_font_sim_blue">Quantos Leitos?</span>
+				<br /><br />
+				<%=text_field_tag :n_leitos_hotel, nil, :class => "Itminput_font_sim_gray"%>
+				<br /><br />
+				<span class="Tit_font_sim_blue">Qual é a taxa de ocupação ?</span>
+				<br /><br />
+				<%=text_field_tag :taxa_ocupacao_hotel, nil, :class => "Itminput_font_sim_gray"%>
+				<br /><br />
+			</div>
+			
+			<div id="Motel" style="display:none;">
+				<span class="Tit_font_sim_blue">Qual é o número de apartamentos de seu Motel?</span><br />
+				<%=text_field_tag :n_apartamentos_motel, nil, :class => "Itminput_font_sim_gray"%> <br />
+				<br />
+				<span class="Tit_font_sim_blue">Qual é a rotatividade?</span><br />
+				<%=text_field_tag :rotatividade_motel, nil, :class => "Itminput_font_sim_gray" %> <br />
+			</div>
+
+			<div id="Hospital" style="display:none;">
+				<span class="Tit_font_sim_blue">Qual é o número de banhos por dia de seu estabelecimento?</span><br />
+				<%=text_field_tag :n_banhos_hospital, nil, :class => "Itminput_font_sim_gray" %> <br />
+			</div>
+
+			<div id="Academia" style="display:none;">
+				<span class="Tit_font_sim_blue">Qual é o número de banhos por dia de seu estabelecimento?</span><br />
+				<%=text_field_tag :n_banhos_academia, nil, :class => "Itminput_font_sim_gray" %> <br />
+			</div>
+			
+			<div id="Energias">
 			<span class="Tit_font_sim_gray">Que tipo de energia é utilizada ?</span>
 			<br /><br />
 			<ul>
-				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />GPL</li>
-				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />DIESEL</li>
-				<li class="Itmchck_font_sim_gray"><input type="checkbox" name="Hotel" />GASOLINA</li>
-			</u>
-	    <%=link_to image_tag("bt_enviar_simulator.png", :width=>"100", :height=>"37",:class=>"Bt_align_sim"),"#" %>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "1"%>GPL</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "2"%>DIESEL</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "3"%>ENERGIA</li>
+			</ul>
+			</div>
+	    <%=image_submit_tag("bt_enviar_simulator.png", :width=>"100", :height=>"37",:class=>"Bt_align_sim")%>
 		<%=image_tag("img_economicgraph.jpg", :width=>"334", :height=>"179" ,:class=>"Sim_img_align")%>
 	</div>
 	
 	<br /><br /><br />
 
-
+</form>
 </div>
