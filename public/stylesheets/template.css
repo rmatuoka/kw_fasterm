@@ -296,7 +296,7 @@ body
 		{
 			position:relative;
 			width:310px;
-			min-height:259px;
+			min-height:200px;
 			float:left;
 			display:block;
 			*width:311px;
@@ -321,6 +321,11 @@ body
 			*display:block;
 			text-align:center;
 		}		
+		#Box_tit_noticias{
+			width:620px;
+			text-align:left;
+			margin-left:30px;
+		}
 		
 		.label_orange
 		{

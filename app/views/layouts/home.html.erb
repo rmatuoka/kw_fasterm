@@ -73,25 +73,22 @@ jQuery(document).ready(function() {
 				<br />  <br />
 				<p class="font_red_12">Assista ao vídeo e entenda como a Fasterm pode gerar economia com sustentabilidade para a sua empresa.</p> 
 			</div>		
-			<div class="Box_content_noticias_left">			
+			<div class="Box_content_noticias_left">	
+				<div id="Box_tit_noticias">	
+					<%= link_to image_tag("tit_noticias.png", :width=>"117", :height=>"48"), noticias_path%>
+				</div>					
+				<% @Noticias.each do |noticias|%>
 				<div class="Box_content" id='Noticias'>
-					<h1><img src="images/tit_noticias.png" width="117" height="48" /></h1> 
+				<a href="<%=noticia_path(noticias.id)%>">	
 					<br /> 
-					<h2>Treinamento Fasterm </h2>
+					<h2><%= noticias.title %></h2>
 					<br /> 
-					<p id="Data">11/09/2010</p> 
+					<p id="Data"><%= noticias.created_at.to_date.strftime("%d/%m/%Y")%></p> 
 					<br />  
-					<p class="font_black_12">Dando início aos trabalhos de abertura das para todo o mercado nacional, dos linha Fasterm, realizamos no último dia19/08, em nossa fábrica em Atibaia, o primeiro treinamento.</p> 
+					<p class="font_black_12"><%= noticias.summary %></p> 
 				</div>  
-				<div class="Box_content" id='Noticias'>
-					<h1></h1> 
-					<br /> 
-					<h2>Treinamento Fasterm </h2>
-					<br /> 
-					<p id="Data">11/09/2010</p> 
-					<br />  
-					<p class="font_black_12">Dando início aos trabalhos de abertura das para todo o mercado nacional, dos linha Fasterm, realizamos no último dia19/08, em nossa fábrica em Atibaia, o primeiro treinamento.</p> 
-				</div>
+				</a>
+				<% end %>
 				<div class="clear"></div>
 			</div>			
 		</div>

@@ -1,3 +1,38 @@
-<%= image_tag("tit_noticias_int.png")%>
-<h1>Noticias#index</h1>
-<p>Find me in app/views/noticias/index.html.erb</p>
+<%content_for :title do%>
+	Noticias
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "eventos" %>	
+	<%= stylesheet_link_tag "noticias" %>
+<%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_eventos.png")%>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id='tit_internal'>
+			<%= image_tag("tit_noticias_int.png")%>
+		</div>
+		<div id='Content_eventos'>
+			<div id='eventos_border'>
+				<%= image_tag("bg_tit.png")%>
+			</div>	
+			
+			<% @Noticias.each do | noticias |%>
+			<div id='eventos_corpo'>
+				<div id='eventos_texto'>
+				<a href="<%= noticia_path(noticias.id)%>">
+					<h1><%= noticias.created_at.to_date.strftime("%d/%m/%Y") %></h1><h2><%= noticias.title%></h2>
+					<div id="eventos_texto_expan">
+						<p><%= noticias.summary%></p>
+					</div>
+				</a>
+				</div>
+			</div>
+			<div id='eventos_border'>
+				<%= image_tag("bg_tit.png")%>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>

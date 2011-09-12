@@ -3,7 +3,7 @@ class Notifier < ActionMailer::Base
   
   def enviar(corpo)
       @Contato = corpo
-      mail(:to => "bsilva@korewa.com.br", :subject => "Fasterm - Contato via site")
-      #mail(:to => "site@fasterm.com.br", :subject => "Nautilus - Contato via site")
+      #mail(:to => "bsilva@korewa.com.br", :subject => "Fasterm - Contato via site")
+      mail(:to => "site@fasterm.com.br", :subject => "Fasterm - Contato via site")
   end
 end

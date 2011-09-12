@@ -4,5 +4,6 @@ class HomeController < ApplicationController
   
   def index
     @Highlights = Highlight.find(:all, :conditions=>[' published = 1'], :order => '`order`')
+    @Noticias = Notice.all(:conditions => ['published = 1'], :limit => 4, :order => "RAND()")
   end
 end

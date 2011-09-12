@@ -63,7 +63,8 @@ vertical-align: middle;
 
 #eventos_texto_expan p{
 	font-family:Verdana, Geneva, sans-serif;
-	font-size:12px;
+	font-size:10px;
+	font-style:italic;
 	color:#5b5b5b;
 	float:left;
 	line-height:16px;

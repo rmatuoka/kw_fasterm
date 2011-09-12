@@ -1,2 +1,34 @@
-<h1>Noticias#show</h1>
-<p>Find me in app/views/noticias/show.html.erb</p>
+<%content_for :title do%>
+	Noticias
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "cases" %>
+<%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_eventos.png")%>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id='tit_internal'>
+			<%= image_tag("tit_noticias_int.png")%>
+		</div>
+		<div id='Content_cases'>
+			<div id='text_content_cases'>
+				<h1><%= @Noticia.title%></h1>
+				<%= raw @Noticia.body%>
+			</div>
+			<div id='img_content_cases'>
+				<ul>
+					<% @Imagens.each do |img|%>
+						<li class="img_cases_li"><%= lightbox_image_tag(img.image.url("thumb"), img.image.url("n_medio"), {:class=>"images"}, :title => img.title, :rel=>"lightbox[noticias]") %></li>
+					<% end %>
+				</ul>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+		
+	</div>
+</div>
