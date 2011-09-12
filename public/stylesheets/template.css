@@ -358,13 +358,13 @@ body
 			}									
 		.Box_content h1
 		{
-			text-align:left;
+			text-align:justify;
 			height:48px;
 		}	
 		.Box_content h2
 		{
 			width:270px;
-			text-align:left;
+			text-align:justify;
 			margin-left:20px;
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:14px;
@@ -384,7 +384,8 @@ body
 			*float:left;
 			*display:block;
 			text-align:center;
-			margin-left:10px;	
+			margin-left:10px;
+			margin-top:70px;	
 
 		}		
 		.Box_video h1
@@ -424,8 +425,15 @@ body
 		{
 			width:270px;
 			margin:auto;
-			text-align:left;
-		}		
+			text-align:justify;
+		}	
+		.vermais{
+			font-family:Verdana, Geneva, sans-serif;
+			color:#339933;
+			font-size:12px;
+			text-align:right !important;
+			margin-top:5px;
+		}	
 		.font_green_12
 		{
 			font-family:Verdana, Geneva, sans-serif;
