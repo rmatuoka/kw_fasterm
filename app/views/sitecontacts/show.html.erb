@@ -1,2 +1,25 @@
-<h1>Sitecontacts#show</h1>
-<p>Find me in app/views/sitecontacts/show.html.erb</p>
+<%content_for :title do%>
+	Contato
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "contato" %>	
+<%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_contato.png")%>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id="Line_box">
+			<h1 class="Title_internal_h1"><%= image_tag("tit_contato.png", :width=>"112", :height=>"17")%></h1><br />
+			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>		
+			<div class="p_agradecimento">
+				<p>
+					Muito obrigado!
+					<br> 
+					<br>
+					Em breve nossa equipe entrará em contato.
+				</p>
+			</div>	
+		</div>	
+	</div>
+</div>

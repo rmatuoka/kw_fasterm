@@ -1,6 +1,7 @@
 #Box_content_internal{
 	float:none !important;
-	min-height
+	margin-bottom: 70px !important;
+	
 }
 #Content_cases{
 	margin-bottom:10px;

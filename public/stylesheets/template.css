@@ -305,6 +305,9 @@ body
 			text-align:center;
 			margin-left:10px;
 		}
+		.Box_content a{
+			text-decoration:none;
+		}
 		
 		.Box_content_noticias_left
 		{
