@@ -1,0 +1,13 @@
+#eventos_texto a{
+	text-decoration:none;
+}
+#eventos_texto h1{
+	float:left;
+	font-size:11px !important;		
+	}
+	
+#eventos_texto h2{
+	float:left;
+	margin:0px 0px 0px 10px !important;	
+	font-size:11px !important;	
+	}
