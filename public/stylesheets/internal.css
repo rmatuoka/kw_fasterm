@@ -307,7 +307,8 @@ body
 				font-weight:normal;
 				color:#5b5b5b;
 				text-align:justify;
-				width:850px;			
+				width:850px;
+				line-height: 18px;			
 			}
 			#Box_text_internal img
 			{
