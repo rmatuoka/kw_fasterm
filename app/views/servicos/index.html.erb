@@ -14,7 +14,7 @@
 		<br /><br /><br />
 		<div id="Box_text_internal">
 		<% if !@Erro%>	
-			<%=image_tag(@DynamicPage.image.url)%>
+			<%=image_tag(@DynamicPage.image.url("lateral"))%>
 			<%= raw @DynamicPage.body%>
 		<% else %>
 			<%= raw @DynamicPage %>

@@ -23,11 +23,12 @@
 						<li class="img_cases_li"><%= lightbox_image_tag(img.image.url("thumb"), img.image.url("c_medio"), {:class=>"images"}, :title => img.title, :rel=>"lightbox[noticias]") %></li>
 					<% end %>
 				</ul>
-			</div>
+			</div>	
 			<br>
 			<br>
 			<br>
 			<br>
+			<%= link_to image_tag("bt_voltar.png"), cases_path%>
 		</div>
 		
 	</div>

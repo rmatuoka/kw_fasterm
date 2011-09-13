@@ -296,7 +296,7 @@ body
 		{
 			position:relative;
 			width:310px;
-			min-height:200px;
+			min-height:250px;
 			float:left;
 			display:block;
 			*width:311px;
@@ -364,7 +364,7 @@ body
 		.Box_content h2
 		{
 			width:270px;
-			text-align:justify;
+			text-align:left;
 			margin-left:20px;
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:14px;
@@ -384,8 +384,7 @@ body
 			*float:left;
 			*display:block;
 			text-align:center;
-			margin-left:10px;
-			margin-top:70px;	
+			margin-left:10px;	
 
 		}		
 		.Box_video h1
@@ -425,7 +424,7 @@ body
 		{
 			width:270px;
 			margin:auto;
-			text-align:justify;
+			text-align:left;
 		}	
 		.vermais{
 			font-family:Verdana, Geneva, sans-serif;

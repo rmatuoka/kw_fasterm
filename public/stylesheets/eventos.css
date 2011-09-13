@@ -49,6 +49,8 @@
 	margin-right:4px;
 	height: 22px;
 	width: 23px;
+	cursor: pointer;
+	
 }
 .evt_mais{
 	background:url(../images/bt_mais.png) left top no-repeat;
