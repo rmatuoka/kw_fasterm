@@ -14,7 +14,7 @@
 		<br /><br /><br />
 		<div id="Box_text_internal">
 		<% if !@Erro%>	
-			<%=image_tag(@DynamicPage.image.url("lateral"))%>
+			<%= lightbox_image_tag(@DynamicPage.image.url("lateral"), @DynamicPage.image.url(), {:class=>"images"}, :title => @DynamicPage.legend) %>
 			<%= raw @DynamicPage.body%>
 		<% else %>
 			<%= raw @DynamicPage %>

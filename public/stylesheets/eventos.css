@@ -73,6 +73,7 @@ vertical-align: middle;
 	margin-top:10px;
 	width:900px;
 	margin-left:10px;
+	line-height: 18px;	
 }
 .body_eventos{
 	margin:30px 0px;
@@ -80,6 +81,7 @@ vertical-align: middle;
 	font-size:12px;
 	color:#5b5b5b;
 	width:900px;
+	line-height: 18px;
 }
 .hide{
 	display:none;
