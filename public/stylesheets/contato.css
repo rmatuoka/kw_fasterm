@@ -90,4 +90,19 @@
 	margin-top:100px;
 	text-align:center;
 } 
+.Form_desire
+{
+	 font-family:Verdana, Geneva, sans-serif;
+	 font-size:18px;
+	 font-weight:normal;
+	 color:#5b5b5b;
+		 background-image:url(../images/bg_dados_contato.png);
+		 background-repeat:no-repeat;
+		 background-position:bottom center;
+	background:#dafcff;
+	border:2px solid #bddadd;
+	border-radius:5;
+	width:362px;
+	height:41px;
+}
  
