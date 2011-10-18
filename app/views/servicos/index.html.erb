@@ -17,7 +17,7 @@
 			<%#= lightbox_image_tag(@DynamicPage.image.url("lateral"), @DynamicPage.image.url(), {:class=>"images"}, :title => @DynamicPage.legend)%>
 			<%= raw @DynamicPage.body%><br>
 			
-			<%=image_tag(@DynamicPage.image.url(),:width => "700", :align => "left")%>
+			<%=image_tag(@DynamicPage.image.url(),:width => "700", :style=> "float:left !important;")%>
 			
 		<% else %>
 			<%= raw @DynamicPage %>
