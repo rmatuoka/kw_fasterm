@@ -27,12 +27,15 @@ class SimulationsController < ApplicationController
     @E_GLP = 2.50
     @E_DIESEL = 2.10
     @E_ENERGIA = 0.42
+    @E_USUARIO = 0
     
     @Economia = 0.00
     total_litros = 0
     horas_de_funcionamento = 0
     kcal_necessarias = 0
     
+    #TRATA CUSTO
+    params[:valor_energia] = params[:valor_energia].gsub(",",".")
     
     #VERIFICA TIPO DE EMPREENDIMENTO
     case params[:empreendimento]
@@ -76,17 +79,17 @@ class SimulationsController < ApplicationController
       puts "GLP"
       @CUSTO_GLP = calcula_custo(calcula_horas_necessarias(total_litros), "glp")
       puts "CUSTO GLP " + @CUSTO_GLP.to_s 
-      @Economia = 100 - ((@CUSTO_FT / @CUSTO_GLP) * 100)
+      @Economia = 100 - ((@CUSTO_FT / @CUSTO_GLP) * 100).round(2)
     when "2"
       puts "DIESEL"
       @CUSTO_DIESEL = calcula_custo(calcula_horas_necessarias(total_litros), "diesel")
       puts "CUSTO DIESEL " + @CUSTO_DIESEL.to_s
-      @Economia = 100 - ((@CUSTO_FT / @CUSTO_DIESEL) * 100)
+      @Economia = 100 - ((@CUSTO_FT / @CUSTO_DIESEL) * 100).round(2)
     when "3"
       puts "ENERGIA"
       @CUSTO_ENERGIA = calcula_custo(calcula_horas_necessarias(total_litros), "energia")
       puts "CUSTO ENERGIA " + @CUSTO_ENERGIA.to_s
-      @Economia = 100 - ((@CUSTO_FT / @CUSTO_ENERGIA) * 100)
+      @Economia = 100 - ((@CUSTO_FT / @CUSTO_ENERGIA) * 100).round(2)
     end
     
     #RETORNA A % DE ECONOMIA
@@ -100,13 +103,25 @@ class SimulationsController < ApplicationController
   def calcula_custo(horas_de_funcionamento, tipo_de_energia)
     custo = 0
     
-    case tipo_de_energia
+    case tipo_de_energia 
       when "glp"
-        custo = ((horas_de_funcionamento * @KCAL_GLP_UN).to_f * @E_GLP) * 30
+        if params[:valor_energia].blank?
+          custo = ((horas_de_funcionamento * @KCAL_GLP_UN).to_f * @E_GLP) * 30
+        else
+          custo = ((horas_de_funcionamento * @KCAL_GLP_UN).to_f * params[:valor_energia].to_f) * 30
+        end
       when "diesel"
-        custo = ((horas_de_funcionamento * @KCAL_DIESEL_UN).to_f * @E_DIESEL) * 30
+        if params[:valor_energia].blank?
+          custo = ((horas_de_funcionamento * @KCAL_DIESEL_UN).to_f * @E_DIESEL) * 30
+        else
+          custo = ((horas_de_funcionamento * @KCAL_DIESEL_UN).to_f * params[:valor_energia].to_f) * 30
+        end
       when "energia"
-        custo = (((horas_de_funcionamento * @KCAL_ENERGIA_UN).to_f * @E_ENERGIA) / 1000) * 30
+        if params[:valor_energia].blank?
+          custo = (((horas_de_funcionamento * @KCAL_ENERGIA_UN).to_f * @E_ENERGIA) / 1000) * 30
+        else
+          custo = (((horas_de_funcionamento * @KCAL_ENERGIA_UN).to_f * params[:valor_energia].to_f) / 1000) * 30
+        end
     end
 
     return custo
