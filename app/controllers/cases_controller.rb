@@ -12,5 +12,6 @@ class CasesController < ApplicationController
     #SELECIONA IMAGENS
     @Imagens = @Case.case_images.all
   end
-
+  def home
+  end
 end
