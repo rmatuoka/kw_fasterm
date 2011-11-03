@@ -80,7 +80,11 @@ KwFasterm::Application.routes.draw do
   resources :empresa
   resources :depoimentos
   resources :categorias
-  resources :cases
+  resources (:cases) {
+	collection do
+		get 'home'
+	end
+  }
   resources :contato
   resources :busca
   resources :esquemas

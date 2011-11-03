@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Line_box
+{	
+	position:relative;
+	width:100%;
+	height:auto;
+	min-height:100px;
+	top:-7px;
+	*top:0px;	
+	left:45px;
+}
+	#Home_line
+	{	
+		position:relative;
+		float:left;
+		height:435px;
+		width:256px;
+		top:-20px;
+	}
+	#Busines_line
+	{
+		position:relative;
+		float:left;
+		height:444px;
+		width:256px;
+		top:-38px;
+	}
+	#Solar_line
+	{
+		position:relative;
+		float:left;
+		height:510px;
+		width:256px;
+		top:-110px;
+	}
+		#Field_line
+	{
+		position:relative;
+		float:left;
+		height:510px;
+		width:200px;
+		top:20px;
+		left:20px;
+	}
+		#Field_line a
+		{
+			text-decoration:none;
+		}	
+		#Field_line a:hover
+		{
+		text-decoration:underline;
+		}			
+		#Field_line p
+		{
+			position:absolute;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:17px;
+			font-weight:normal;
+			color:#1e60a5;
+			width:143px;
+			top:15px;
+		}	
+		.Detail_align
+		{
+			position:absolute;
+			top:-35px;
+			left:0px;
+			z-index:-100;
+		}
