@@ -115,7 +115,12 @@ body
 			color:#830000;
 			text-decoration:none
 		}
-			
+	  @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0)/*opera menu */
+	  {
+				#Menu {
+						  padding-top:23px;
+					   }
+	  }			
 		#Menu
 		{
 			background-image:url(../images/menu/bg_menu.png);

@@ -1,17 +1,22 @@
 <%content_for :title do%>
-	Cases
+	Cases home
 <%end%>
 <%content_for :head do %>
 	<%= stylesheet_link_tag "cases_home" %>
-	<%=javascript_include_tag "showcases.js"%>
 <%end%>
 <%content_for :featured_image do %>
-	<%= image_tag("img_freatured_cases.png")%>
+	<%= image_tag("img_freatured_busines.png")%>
 <%end%>
 <div id="Content">
 	<div id="Box_content_internal">
-		<div id="Home_line">1</div>
-		<div id="Busines_line">2</div>
-		<div id="Solar_line">3</div>
+		<div id="Line_box">
+			<div id="Cases_line">
+				<%=link_to image_tag("img_home_casesdesuce.png", :width=>"276", :height=>"435"), linha_categoria_path(8,4)%>
+			</div>
+			<div id="Dep_line">
+				<%=link_to image_tag("img_home_depoimentos.png", :width=>"276", :height=>"507"),linha_categoria_path(9,5)%>
+			</div>
+			<%=image_tag("img_detail_rightlinhas_hm_cs.png", :width=>"65", :height=>"90" ,:class=>"Detail_align")%>		
+		</div>	
 	</div>
 </div>

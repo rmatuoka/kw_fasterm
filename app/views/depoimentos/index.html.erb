@@ -1,2 +1,63 @@
-<h1>Depoimentos#index</h1>
-<p>Find me in app/views/depoimentos/index.html.erb</p>
+<%content_for :title do%>
+	Cases
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "cases" %>
+	<%=javascript_include_tag "showcases.js"%>
+<%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_cases.png")%>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<div id='tit_internal'>
+			<img src='../images/tit_cases.png'>
+		</div>
+		<div id='Content_cases'>
+					<%	$i = 0
+					$atual = ""
+					@Cases.each do |cases|
+				%>
+					<% if $atual != cases.category %>	
+						<% if $atual == ""%>		
+							<li class='tit_case_mais' onclick="show_session(<%= $i %>, this)"><%= cases.category%></li>
+							<div id='box_cases<%= $i %>' class='hide showboxcases'>
+								<a href='<%= case_path(cases.id)%>'>
+									<div class='itens_cases'>
+										<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
+										<p><%= cases.title%></p>
+									</div>
+								</a>
+							<% $atual = cases.category %>
+						<% else %>
+							</div>
+							<div id='divclear'></div>
+							<% $i += 1 %>
+							<li class='tit_case_mais' onclick="show_session(<%= $i %>, this)"><%= cases.category%></li>
+							<div id='box_cases<%= $i %>' class='hide showboxcases'>	
+									<a href='<%= case_path(cases.id)%>'>
+										<div class='itens_cases'>
+											<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
+											<p><%= cases.title%></p>
+										</div>
+									</a>
+								<% $atual = cases.category %>
+						<%end%>
+					<% else %>
+							<a href='<%= case_path(cases.id)%>'>
+								<div class='itens_cases'>
+									<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
+									<p><%= cases.title%></p>
+								</div>
+							</a>
+						<% $atual = cases.category %>
+					<% end
+					end%>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div id='divclear'></div>
+		</div>
+	</div>
+</div>

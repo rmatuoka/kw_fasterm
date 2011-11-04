@@ -5,41 +5,31 @@
 {	
 	position:relative;
 	width:100%;
-	height:auto;
-	min-height:100px;
-	top:-7px;
-	*top:0px;	
-	left:45px;
+	height:700px;
+	*top:10px;
 }
-	#Home_line
+	#Cases_line
 	{	
 		position:relative;
-		float:left;
+		left:230px;
 		height:435px;
 		width:256px;
-		top:-20px;
+		top:-34px;
 	}
-	#Busines_line
+	#Dep_line
 	{
 		position:relative;
-		float:left;
+		left:504px;
 		height:444px;
 		width:256px;
-		top:-38px;
+		top:-540px;
 	}
-	#Solar_line
-	{
-		position:relative;
-		float:left;
-		height:510px;
-		width:256px;
-		top:-110px;
-	}
+
 		#Field_line
 	{
 		position:relative;
 		float:left;
-		height:510px;
+		height:310px;
 		width:200px;
 		top:20px;
 		left:20px;
@@ -64,8 +54,7 @@
 		}	
 		.Detail_align
 		{
-			position:absolute;
-			top:-35px;
-			left:0px;
-			z-index:-100;
+			position:relative;
+			top:-880px;
+			left:953px;
 		}
