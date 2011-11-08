@@ -49,6 +49,18 @@ blockquote, q {
 }
 
 /* end of reset*/
+@font-face {
+    font-family: 'antipasto';
+    src: url('antipasto_regular-webfont.eot');
+    src: url('antipasto_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('antipasto_regular-webfont.woff') format('woff'),
+         url('antipasto_regular-webfont.ttf') format('truetype'),
+         url('antipasto_regular-webfont.svg#TheSansCorrespeBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html
 {
 	
@@ -93,23 +105,33 @@ body
 		z-index:3000;
 	}
 	#Logo{
-		margin-top:10px;
+		position:relative;
+		top:18px;
 		margin-left:50px;
 		}
 		#Contato
 		{
-			width:180px;
-			min-height:25px;
+			background-image:url(../images/bg_contato.png);
+			background-repeat:no-repeat;
+			background-position:center;		
+			width:140px;
+			min-height:41px;
 			margin:auto;
-			float:right;		
+			float:right;
+			font-weight:normal;
+			font-size:14px;			
+			color:#3ab3f9;				
 		}
 			#Contato a
 			{
-				font-family:Verdana, Geneva, sans-serif;
-				font-size:11px;
+				position:relative;
+				top:13px;
+				left:17px;
+				font-family:antipasto;
+				font-size:14px;
 				font-weight:normal;
 				text-transform:uppercase;
-				color:#830000;
+				color:#3ab3f9;
 				text-decoration:none
 			}
 	  @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0)/*opera menu */
@@ -117,59 +139,83 @@ body
 				#Menu {
 						  padding-top:23px;
 					   }
-	  }     					
+	  }			
 		#Menu
 		{
 			background-image:url(../images/menu/bg_menu.png);
 			background-repeat:no-repeat;
 			background-position:center;
 			position:absolute;
-			left:260px;
-			top:128px;
-			width:495px;
+			left:180px;
+			top:122px;
+		/*	top:128px; */
+			width:580px;
 			height:33px;
 			margin:auto;
+			z-index:10000;
 		}	
 		#Menu ul
 		{
 			position:relative;
 			margin-top:10px;
-			*padding-top:10px;  /*ie7*/	
-			margin-left:21px;
+			*padding-top:2px;  /*ie7*/	
+			margin-left:12px;
 			width:auto;
 		}
 		#Menu li
 		{
 			display:inline;
-			margin-right:14px;			
+			margin-right:10px;			
 		}
 		.item_align
 			{
 			}			
-		.Bt_empresa_menu
+		.Bt_home_menu
 		{	
 		}
-			.Bt_empresa_menu a
+			.Bt_home_menu a
 			{
-				background-image:url(../images/menu/bt_empresa.png);
+				background-image:url(../images/menu/bt_home.png);
 				background-repeat:no-repeat;
-				background-position:0px 4px;
+				background-position:0px 3px;
 				width:128px;
 				height:14px;
 				text-decoration:none;
-				padding-right:72px;	
+				padding-right:52px;	
 				*padding-top:17px;  /*ie7*/								
 			}	
-			.Bt_empresa_menu a:hover
+			.Bt_home_menu a:hover
 			{
-					background-image:url(../images/menu/bt_empresa.png);
+					background-image:url(../images/menu/bt_home.png);
 					background-repeat:no-repeat;
-					background-position:0px -11px;
+					background-position:0px -12px;
 					width:128px;
-					height:14px;				
+					height:13px;				
 			}	
 			
-			
+		.Bt_pqfasterm_menu
+		{	
+		}
+			.Bt_pqfasterm_menu a
+			{
+				background-image:url(../images/menu/bt_porquefasterm.png);
+				background-repeat:no-repeat;
+				background-position:0px 2px;
+				width:128px;
+				height:22px;
+				text-decoration:none;
+				padding-right:133px;			
+				*padding-top:17px;  /*ie7*/								
+			}	
+			.Bt_pqfasterm_menu a:hover
+			{
+					background-image:url(../images/menu/bt_porquefasterm.png);
+					background-repeat:no-repeat;
+					background-position:0px -16px;
+					width:128px;
+					height:22px;				
+			}	
+						
 			.Bt_produtos_menu
 			{	
 			}
@@ -225,7 +271,7 @@ body
 					width:128px;
 					height:14px;
 					text-decoration:none;
-					padding-right:57px;	
+					padding-right:56px;	
 					*padding-top:17px;  /*ie7*/											
 				}	
 				.Bt_cases_menu a:hover
@@ -236,10 +282,10 @@ body
 						width:128px;
 						height:14px;				
 				}	
-			.Bt_cases2_menu
+			.Bt_eventos_menu
 			{	
 			}
-				.Bt_cases2_menu a
+				.Bt_eventos_menu a
 				{
 					background-image:url(../images/menu/bt_eventos.png);
 					background-repeat:no-repeat;
@@ -247,10 +293,10 @@ body
 					width:128px;
 					height:14px;
 					text-decoration:none;
-					padding-right:75px;
+					padding-right:74px;
 					*padding-top:17px;  /*ie7*/												
 				}	
-				.Bt_cases2_menu a:hover
+				.Bt_eventos_menu a:hover
 				{
 						background-image:url(../images/menu/bt_eventos.png);
 						background-repeat:no-repeat;
@@ -259,8 +305,7 @@ body
 						height:14px;				
 				}					
 						
-																
-								
+											
     #Featured  /*Destaque*/
 	{
 		position:relative;
@@ -448,7 +493,7 @@ body
 			font-size:12px;
 			color:#333333;
 		}								
-	#Footer
+#Footer
 	{
 		position:relative;
 		font-family:Verdana, Geneva, sans-serif;
@@ -456,10 +501,10 @@ body
 		font-size:11px;
 		position:relative;
 		width:1000px;
-		min-height:132px;
+		min-height:147px;
 		margin:auto;
 		clear:both;	
-		margin-top:70px;
+		margin-top:65px;		
 	}
 		#Footer_content_box	
 		{
@@ -470,7 +515,8 @@ body
 			background-position:center;	
 			width:280px;	
 			height:46px;
-			top:35px;	
+			top:0px;
+			left:28px;	
 			padding:10px 10px 10px 10px;
 		}	
 			#Footer_content_box	p
@@ -479,5 +525,14 @@ body
 				font-size:11px;
 				font-weight:normal;
 				color:#48932e;
-			}					
+			}	
+		#Footer_box_logos	
+		{
+			position:relative;
+			display:block;
+			width:280px;	
+			height:46px;
+			top:-100px;
+			left:670px;	
+		}								
 	.clear{ clear:both; width:100%}

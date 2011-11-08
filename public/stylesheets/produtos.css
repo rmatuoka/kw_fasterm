@@ -17,7 +17,7 @@
 		float:left;
 		height:435px;
 		width:256px;
-		top:-20px;
+		top:-12px;
 	}
 	#Busines_line
 	{
@@ -25,7 +25,7 @@
 		float:left;
 		height:444px;
 		width:256px;
-		top:-38px;
+		top:-30px;
 	}
 	#Solar_line
 	{
@@ -33,7 +33,7 @@
 		float:left;
 		height:510px;
 		width:256px;
-		top:-110px;
+		top:-102px;
 	}
 		#Field_line
 	{
@@ -41,7 +41,7 @@
 		float:left;
 		height:510px;
 		width:200px;
-		top:20px;
+		top:39px;
 		left:20px;
 	}
 		#Field_line a

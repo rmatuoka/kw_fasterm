@@ -14,7 +14,8 @@
 		left:230px;
 		height:435px;
 		width:256px;
-		top:-34px;
+		top:-25px;
+		*top:-35px;
 	}
 	#Dep_line
 	{
@@ -22,7 +23,8 @@
 		left:504px;
 		height:444px;
 		width:256px;
-		top:-540px;
+		top:-530px;
+		*top:-540px;
 	}
 
 		#Field_line
