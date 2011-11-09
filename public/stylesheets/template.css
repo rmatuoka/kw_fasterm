@@ -318,6 +318,7 @@ body
 		{
 			position:relative;
 			top:-38px;
+			*top:-38px;
 			left:-47px;	
 		/*	top:-25px;
 			left:-4px; */
@@ -342,7 +343,7 @@ body
 		{
 			position:relative;
 			width:310px;
-			min-height:250px;
+			min-height:238px;
 			float:left;
 			display:block;
 			*width:311px;
@@ -359,7 +360,7 @@ body
 		{
 			position:relative;
 			width:650px;
-			min-height:320px;
+			min-height:308px;
 			float:left;
 			display:block;
 			*width:650px;
@@ -416,7 +417,7 @@ body
 			font-size:14px;
 			color:#ff0000;			
 		}
-		.Box_video
+		.Box_vantagens
 		{
 			background-image:url(../images/bg_video.png);
 			background-repeat:repeat-y;
@@ -429,31 +430,12 @@ body
 			*width:330px;
 			*float:right;
 			*display:block;
-			text-align:center;
-			margin-left:10px;	
+			margin-right:20px;		
 
-		}		
-		.Box_video h1
-		{
-			text-align:left;
-			margin-left:10px;
-			height:48px;
-		}	
-		.Box_video h2
-		{
-			width:270px;
-			text-align:left;
-			margin-left:20px;
-			font-family:Verdana, Geneva, sans-serif;
-			font-size:14px;
-			color:#ff0000;			
 		}
-		.Box_video p
+		.Box_formasdeaquisicaobnds
 		{
-			width:280px;
-			text-align:left;
-			margin-left:20px;
-		
+			position:relative;
 		}						
 		#Data
 		{
@@ -532,9 +514,6 @@ body
 		{
 			position:relative;
 			display:block;
-			background-image:url(../images/bg_footer_content.png);
-			background-repeat:no-repeat;
-			background-position:center;	
 			width:280px;	
 			height:46px;
 			top:0px;

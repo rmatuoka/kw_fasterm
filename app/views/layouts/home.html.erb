@@ -46,11 +46,10 @@ jQuery(document).ready(function() {
 		</div>
 		<div id="Content">
 			<div class="Box_content">
-				<%= image_tag("img_green_wave.png",:style=>"position:absolute;top:-93px; left:-30px; z-index:10000;")%>
 				<a href="<%= empresa_index_path%>">
 					<h1><img src="images/tit_porqueafasterm.png" width="221" height="51" /></h1>
 					<br />
-					<img src="images/img_porquefasterm.jpg" width="260" height="89" />
+					<img src="images/img_porquefasterm.jpg" width="276" height="102" />
 					<br /><br />
 					<p class="font_green_12">Conheça a Fasterm e entenda por que temos a melhor solução em aquecimento de água para sua empresa.</p>
 				</a>
@@ -59,27 +58,27 @@ jQuery(document).ready(function() {
 				<a href="<%= cases_path%>">
 					<h1><img src="images/tit_casesdesucesso.png" width="211" height="54" /></h1>
 					<br />
-					<img src="images/img_casesdesucesso.jpg" width="261" height="91" />
+					<img src="images/img_casesdesucesso.jpg" width="276" height="102" />
 					<br /><br />
 					<p class="font_blue_12">Conheça nossos cases de sucesso e veja como o sistema Fasterm gera grande economia com sustentabilidade.</p>´
 				</a>
 			</div>   
 			<div class="Box_content">
 				<h1><img src="images/tit_sistemafastermecono.png" width="312" height="59" /></h1> <br />
-				<%=link_to image_tag("img_sistemafastermeconomia.jpg", :width=>"337", :height=>"186"),simulations_path %>    
+				<%=link_to image_tag("img_sistemafastermeconomia.jpg", :width=>"339", :height=>"168"),simulations_path %>    
 				<br />   
 			</div>     
-			<div class="Box_video">
-				<h1><img src="images/tit_vantagens_fasterm.png" width="196" height="32" /></h1> 
-				<br /><br />
+			<div class="Box_vantagens">
+				<h1><img src="images/tit_vantagens_fasterm.png" width="196" height="64" /></h1>
 				<img src="images/img_conhecavantagensfasterm.jpg" width="337" height="509" />    
 				 
 			</div>	
 		
 			<div class="Box_content_noticias_left">	
 				<div id="Box_tit_noticias">	
-					<%= link_to image_tag("tit_noticias.png", :width=>"117", :height=>"48"), noticias_path%>
-				</div>					
+					<%= link_to image_tag("tit_noticias.png", :width=>"117", :height=>"50"), noticias_path%>
+				</div>	
+				<img src="images/img_linedetailhome.png" width="622" height="1" style="position:relative; left:-15px;" />				
 				<% @Noticias.each do |noticias|%>
 				<div class="Box_content" id='Noticias'>
 				<a href="<%=noticia_path(noticias.id)%>">	
@@ -94,23 +93,26 @@ jQuery(document).ready(function() {
 				</a>
 				<% end %>
 				<div class="clear"></div>				
-			</div>	
-			<div class="Box_content">
-				<a href="<%= cases_path%>">
-					<h1><img src="images/tit_formasdeaquisicao.png" width="209" height="38" /></h1>
-					<br />
-					<img src="images/img_formasdeaquisicao.png" width="325" height="187" />
-				</a>
-			</div> 
-			<div class="Box_content">
-				<a href="<%= cases_path%>">
-					<h1><img src="images/tit_simuladordebnds.png" width="194" height="35" /></h1>
-					<br />
-					<img src="images/img_bnds.png" width="325" height="187" />
-				</a>
-			</div>  			
-			
+			</div>
+			<div class="Box_formasdeaquisicaobnds">
+				<img src="images/img_linedetailhome.png" width="622" height="1"  style="position:relative; top:45px; left20px;"/>
+				<div class="Box_content">
+					<a href="<%= cases_path%>">
+						<h1><img src="images/tit_formasdeaquisicao.png" width="209" height="38" /></h1>
+						<br />
+						<img src="images/img_formasdeaquisicao.png" width="325" height="187" />
+					</a>
+				</div> 
+				<div class="Box_content">
+					<a href="<%= cases_path%>">
+						<h1><img src="images/tit_simuladordebnds.png" width="194" height="35" /></h1>
+						<br />
+						<img src="images/img_bnds.png" width="325" height="187" />
+					</a>
+				</div>  			
+			</div>
 		</div>
+		<img src="images/img_linedetailsbottomhome.png" width="963" height="1" />
 		<div id="clear"></div>
 		<%= render :file => "layouts/_footer.html.erb"%>
 	</div>    
