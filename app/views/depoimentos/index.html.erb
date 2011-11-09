@@ -1,63 +1,45 @@
 <%content_for :title do%>
-	Cases
+	Depoimentos
 <%end%>
 <%content_for :head do %>
-	<%= stylesheet_link_tag "cases" %>
-	<%=javascript_include_tag "showcases.js"%>
+	<%= stylesheet_link_tag "eventos" %>
+	<%=javascript_include_tag "showeventos.js"%>	
 <%end%>
 <%content_for :featured_image do %>
-	<%= image_tag("img_freatured_cases.png")%>
+	<%= image_tag("img_freatured_busines.png")%>
 <%end%>
 <div id="Content">
 	<div id="Box_content_internal">
-		<div id='tit_internal'>
-			<img src='../images/tit_cases.png'>
-		</div>
-		<div id='Content_cases'>
-					<%	$i = 0
-					$atual = ""
-					@Cases.each do |cases|
-				%>
-					<% if $atual != cases.category %>	
-						<% if $atual == ""%>		
-							<li class='tit_case_mais' onclick="show_session(<%= $i %>, this)"><%= cases.category%></li>
-							<div id='box_cases<%= $i %>' class='hide showboxcases'>
-								<a href='<%= case_path(cases.id)%>'>
-									<div class='itens_cases'>
-										<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
-										<p><%= cases.title%></p>
-									</div>
-								</a>
-							<% $atual = cases.category %>
-						<% else %>
-							</div>
-							<div id='divclear'></div>
-							<% $i += 1 %>
-							<li class='tit_case_mais' onclick="show_session(<%= $i %>, this)"><%= cases.category%></li>
-							<div id='box_cases<%= $i %>' class='hide showboxcases'>	
-									<a href='<%= case_path(cases.id)%>'>
-										<div class='itens_cases'>
-											<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
-											<p><%= cases.title%></p>
-										</div>
-									</a>
-								<% $atual = cases.category %>
-						<%end%>
-					<% else %>
-							<a href='<%= case_path(cases.id)%>'>
-								<div class='itens_cases'>
-									<p class='img_itens_cases'><%= image_tag(cases.image.url("thumb"))%><p>
-									<p><%= cases.title%></p>
-								</div>
-							</a>
-						<% $atual = cases.category %>
-					<% end
-					end%>
-			<br>
-			<br>
-			<br>
-			<br>
-			<div id='divclear'></div>
+		<h1 class="Title_internal_h1">
+			<%= image_tag("tit_depoimento.png")%>
+		</h1>
+		<div id='Content_eventos'>
+			<div id='eventos_border'>
+				<%= image_tag("bg_tit.png")%>
+			</div>	
+			
+			<%	$i = 0 
+				@depoimentos.each do | depoimento |%>
+			<div id='eventos_corpo'>
+				<div id='eventos_imagem'>
+					<%#= image_tag(depoimento.image.url("home_evt"))%>
+				</div>
+				<div id='eventos_texto'>
+					<p><span><%= depoimento.name %> /</span> <%= depoimento.company%></p>
+				</div>
+				<div id='eventos_mais' class="evt_mais" onclick="show_eventos(<%= $i %>, this)">
+					
+				</div>
+				<div id='divclear'></div>
+				<div id="eventos_body<%= $i %>" class="hide body_eventos">
+						<%= raw depoimento.testimonial%>
+				</div>
+			</div>
+			<div id='eventos_border'>
+				<%= image_tag("bg_tit.png")%>
+			</div>
+			<% 	$i += 1
+				end %>
 		</div>
 	</div>
 </div>
