@@ -23,12 +23,12 @@
 			</div>
 			<div id="Contato_boxright">
 			<label>Assunto:</label>
-			<%=select_tag :area, raw(
+			<%=f.select :area, raw(
 			'<option value="Proposta">Proposta</option>
 			 <option value="Consulta">Consulta</option>
 			 <option value="Dúvida">Dúvida</option>
 			 <option value="Reclamação">Reclamação</option>
-			 <option value="Assistência Técnica">Assistência Técnica</option></option>'),:class=>"Form_desire"%><br><br>
+			 <option value="Assistência Técnica">Assistência Técnica</option></option>'),{},:class=>"Form_desire"%><br><br>
 				<label>Mensagem:</label><div id="input_bg_message"><%=f.text_area(:message, :class=>"input_message")%></div><br />
 				<%= image_submit_tag("bt_enviar_contato.png", :width=>"100" , :height=>"37", :class=>"bt_align_contato")  %>
 			</div>
