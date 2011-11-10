@@ -84,12 +84,14 @@ body
 	position:relative;
 	width:100%;
 	min-height:1000px;
+	min-width:1000px;
 	margin:auto;
 }
 #General
 {
 	position:relative;
-	width:1000px;
+	width:1000px;/
+	min-width:1000px;
 	min-height:1000px;
 	margin:auto;
 }
@@ -319,7 +321,7 @@ body
 			position:relative;
 			top:-38px;
 			*top:-38px;
-			left:-47px;	
+			left:-46px;	
 		/*	top:-25px;
 			left:-4px; */
 			width:768px;
