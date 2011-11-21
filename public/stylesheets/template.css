@@ -335,6 +335,7 @@ body
 	#Content
 	{
 		position:relative;
+		display:block;
 		display:inline-block;
 		width:1000px;
 		min-height:800px;
@@ -355,6 +356,7 @@ body
 			margin-left:10px;
 		}
 		.Box_content a{
+		position:relative;
 			text-decoration:none;
 		}
 		
@@ -438,6 +440,8 @@ body
 		.Box_formasdeaquisicaobnds
 		{
 			position:relative;
+			width:647px;
+			float:left;
 		}						
 		#Data
 		{

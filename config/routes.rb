@@ -1,5 +1,6 @@
 KwFasterm::Application.routes.draw do
 
+
   #Inicio Namespace Admin
   namespace(:admin){
     resources(:sections){
