@@ -1,6 +1,10 @@
 KwFasterm::Application.routes.draw do
 
 
+  match 'vantagens' => "static_content#advantages"
+
+  match 'aquisicoes' => "static_content#acquisition"
+
   #Inicio Namespace Admin
   namespace(:admin){
     resources(:sections){
