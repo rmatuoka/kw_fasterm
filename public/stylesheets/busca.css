@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+.Prod_notc
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11.87px;
+	color:#5b5b5b;
+	margin:0px 0px 10px 0px;
+}
+.Search
+{
+	position:relative;
+	height:29px;
+	width:423px;
+	background-image:url(../images/bg_busca.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+
+.Bt_busca
+{
+	position:absolute;
+	top:1px;
+	right:0px;
+}
+.Search input
+{
+	position:absolute;
+	top:4px;
+	left:2px;
+	width:339px;
+	background:none;
+	border:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11.87px;
+	color:#5b5b5b;
+}
+
+#Box_content_internal
+{
+	width:903px;
+}
+.Title_acquisition_h1
+{
+	position:relative;
+	top:0px;
+	left:-30px;
+	margin-bottom:10px;
+}
+.Title_acquisition_h2
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#b80c06;
+}
+.Title_acquisition_h3
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#ff0000;
+}
+.img_align_line_busca1
+{
+	position:relative;
+	margin-bottom:17px;
+}
+.Item_busca
+{
+	position:relative;
+	width:895px;
+	height:87px;
+}
+	.Title_name
+	{
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:normal;
+		font-size:14px;
+		color:#1e93d1;		
+	}
+	.Title_data
+	{
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:normal;
+		font-size:11px;
+		color:#850101;	
+		margin-left:10px;	
+	}
+	.Text_busca
+	{
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:normal;
+		font-size:14px;
+		color:#5b5b5b;
+	}
+	.img_align_line_busca2
+	{
+		position:relative;
+		margin-top:17px;
+	}
+.Text_acquisition_black
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#000000;
+}
+
+.Text_acquisition_green
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:14px;
+	color:#046629;
+}
+.Img_topic_align
+{
+	position:relative;
+	margin-right:17px;
+	margin-left:17px;
+}

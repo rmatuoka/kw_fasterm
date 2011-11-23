@@ -1,2 +1,33 @@
-<h1>StaticContent#acquisition</h1>
-<p>Find me in app/views/static_content/acquisition.html.erb</p>
+<%content_for :title do%>
+	Vantagens
+<%end%>
+<%content_for :head do %>	
+	<%= stylesheet_link_tag "acquisition" %>
+<%end%>
+<%content_for :featured_image do %>
+	<%= image_tag("img_freatured_servicos.png")%>
+<%end%>
+<div id="Content">
+	<div id="Box_content_internal">
+		<h1 class="Title_acquisition_h1"><img src="images/tit_formasaquisicao.png" /></h1>
+		<img src="images/img_line_detailinternal.png" width="903" height="7" />
+		<br /><br />
+		<h2 class="Title_acquisition_h2">Opção 1</h2>
+		<br />
+		<p class="Text_acquisition_topic">Utilize o Cartão BNDES e parcele suas compras em até 48 vezes com juros mais baixos.
+			Conheça também os financiamentos especiais que bancos como o Santander e a Nossa Caixa – SP e o PROESCO BNDES oferecem, com linhas específicas para atender a empreendedores que desejem reformar ou construir e substituir seu maquinário por equipamentos da linha verde.</p>
+		<br />		
+		<p class="Text_acquisition_green">Outro diferencial Fasterm é a aquisição com RISCO ZERO, na qual é feito um estudo com uma projeção da economia que o sistema pode fornecer ao empreendimento durante 60 dias. Se após o tempo estipulado a meta de economia não for alcançada, a Fasterm retira os aquecedores sem custos para o empreendedor.</p>
+		<br />
+		<h2 class="Title_acquisition_h2">Opção 2</h2>
+		<br />
+		<p class="Text_acquisition_topic">Conheça as formas especiais de financiamento que a FASTERM criou para facilitar suas compras:</P>
+		<br />	
+		<p class="Text_acquisition_topic"><img src="images/img_topc_ball_advantages.png" class="Img_topic_align"/>Cartão BNDES, com parcelamento em até 48 vezes a juros mais baixos;</p>
+		<p class="Text_acquisition_topic"><img src="images/img_topc_ball_advantages.png" class="Img_topic_align"/>PROESCO BNDES, Santander e Banco do Brasil – SP, que oferecem linhas específicas para atender a empreendedores que estejam construindo ou reformando e desejem substituir seu maquinário por equipamentos da linha verde (ecologicamente corretos);</p>
+		<br />
+		<p class="Text_acquisition_topic"><img src="images/img_topc_ball_advantages.png" class="Img_topic_align"/>RISCO ZERO, sua melhor garantia de eficiência no sistema Fasterm. Uma equipe especializada fará um estudo com a projeção de economia que o sistema pode oferecer a seu empreendimento e, ao final de 60 dias, se o sistema não atingir a meta, os equipamentos são retirados sem qualquer custo.</p>
+		<div id="clear"></div>
+		</div>
+	</div>
+</div>

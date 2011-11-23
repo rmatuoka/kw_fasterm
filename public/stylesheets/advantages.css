@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Box_content_internal
+{
+	width:903px;
+}
+.Title_advantages_h1
+{
+	position:relative;
+	top:0px;
+	left:-30px;
+	margin-bottom:10px;
+}
+.Title_advantages_h2
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:15px;
+	color:#b80c06;
+}
+.Text_advantages_black
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#000000;
+}
+.Text_advantages_topic
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#5b5b5b;
+}
+.Img_topic_align
+{
+	position:relative;
+	margin-right:5px;
+}
