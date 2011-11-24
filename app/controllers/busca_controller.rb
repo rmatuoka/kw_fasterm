@@ -4,8 +4,9 @@ class BuscaController < ApplicationController
   end
 	def resultado
 		if !params[:keyword].blank?
-		  @Produtos = Category.search_for(params[:keyword])
-		  @Noticias = Notice.search_for(params[:keyword])
+		  key = "%"+params[:keyword]+"%"
+		  @Produtos = Category.find(:all, :conditions=>["(title LIKE ? OR description LIKE ?) and published = 1",key,key])
+		  @Noticias = Notice.find(:all, :conditions=>["(title LIKE ? OR body LIKE ? OR summary LIKE ?) and published = 1",key,key,key])
 		  @Erro = false
 		  
 		else

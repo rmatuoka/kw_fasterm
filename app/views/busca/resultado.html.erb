@@ -9,8 +9,8 @@
 <%end%>
 <div id="Content">
 	<div id="Box_content_internal">
-		<h1 class="Title_acquisition_h1"><img src="images/tit_resultado.png" /></h1>
-		<img src="images/img_line_detailinternal.png" width="903" height="7" />
+		<h1 class="Title_acquisition_h1"><%= image_tag ("tit_resultado.png")%></h1>
+		<%= image_tag ("img_line_detailinternal.png"),:style=>"width=903px; height=7px;" %>
 		<br /><br />
 		<h2 class="Title_acquisition_h2">&nbsp;BUSCAR NOVAMENTE ?</h2>
 		<div class="Search">
@@ -22,39 +22,52 @@
 		<br />
 		<h2 class="Title_acquisition_h3">RESULTADOS DA BUSCA DE NOTÍCIAS.</h2>
 		<br />
-		<img src="images/img_detailline_busca.png" class="img_align_line_busca1" />
+		<%= image_tag ("img_detailline_busca.png"),:class=>"img_align_line_busca1" %>
 		<% if @Erro %>
-			Preencha o campo Busca!
+			<div class="Item_busca">
+				<p class="Text_busca">Preencha o campo Busca!</p>
+			</div>
 		<% else %>
 			<%if (!@Produtos.blank?) && (!@Noticias.blank?) %>
 				<%if (!@Produtos.blank?) %>
-					<h3>Produtos</h3>
+					<h3 class="Title_busca_h3">Resultados em Produtos</h3><br />
 					<% @Produtos.each do |p| %>
 							<div class="Item_busca">
-								<label class="Title_name"><%= p.title%></label>
-								<p class="Text_busca"><%= p.description %></p>
-								<%image_tag ("img_detailline_busca.png"),:class=>"img_align_line_busca2" %>
+								<a href="<%=linha_categoria_path(p.section_id,p.id)%>">
+									<label class="Title_name"><%= p.title%></label>
+									<p class="Text_busca"><%= p.section.title %></p>
+								</a>
+								<%= image_tag ("img_detailline_busca.png"),:class=>"img_align_line_busca2" %>
 							</div>
 					<%end%>
 				<%end%>
 				<%if (!@Noticias.blank?) %>
-					<h3>Noticias</h3>
-					
+					<h3 class="Title_busca_h3">Resultados em Noticias</h3><br />
+					<% @Noticias.each do |n| %>
+							<div class="Item_busca">
+								<a href="<%=noticia_path(n.id)%>">
+									<label class="Title_name"><%= n.title%></label>
+									<p class="Text_busca"><%= n.summary %></p>
+								</a>
+								<%= image_tag ("img_detailline_busca.png"),:class=>"img_align_line_busca2" %>
+							</div>
+					<%end%>							
 				<%end%>				
 			<% else %>
-				Não há resultados de busca!
+				<div class="Item_busca">
+					<p class="Text_busca">Não há resultados de busca!</p>
+				</div>
 			<%end%>
 		<%end%>
 			
-		
-		
+<!-- 			
 		<div class="Item_busca">
 			<label class="Title_name">Treinamento Fasterm</label><span class="Title_data">11/09/2010</span>
 			<p class="Text_busca">Dando início aos trabalhos de abertura das para todo o mercado nacional, dos linha Fasterm, realizamos no último dia 19/08, em nossa fábrica em Atibaia, o primeiro treinamento.</p>
 			<img src="images/img_detailline_busca.png" class="img_align_line_busca2" />
 		</div>
 		<br />	
-
+-->
 
 
 		
