@@ -10,11 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20111018201932) do
-=======
-ActiveRecord::Schema.define(:version => 20100525032143) do
->>>>>>> f84c6f3e5ffb35162b151200b1b0e94a9118a3c2
+ActiveRecord::Schema.define(:version => 20111123200214) do
 
   create_table "case_images", :force => true do |t|
     t.integer  "case_id"
@@ -46,9 +42,14 @@ ActiveRecord::Schema.define(:version => 20100525032143) do
   create_table "categories", :force => true do |t|
     t.integer  "section_id"
     t.string   "title"
-    t.integer  "published",  :default => 0
+    t.integer  "published",        :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
   end
 
   create_table "dynamic_pages", :force => true do |t|
@@ -242,10 +243,7 @@ ActiveRecord::Schema.define(:version => 20100525032143) do
     t.datetime "updated_at"
     t.string   "city"
     t.string   "state"
-<<<<<<< HEAD
     t.string   "area"
-=======
->>>>>>> f84c6f3e5ffb35162b151200b1b0e94a9118a3c2
   end
 
   create_table "testimonials", :force => true do |t|

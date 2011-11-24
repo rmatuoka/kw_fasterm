@@ -9,12 +9,22 @@
 		Nome:<br>
 		<%=f.text_field :title %><br>
 	</label><br><br>
-		
+	
+	<label>
+		Descrição:<br>
+		<%=f.text_area :description, :class => "mceEditor"  %><br>
+	</label><br><br>
+	
+	<label>
+		PDF:<br>
+		<%=f.file_field :pdf %><br>
+	</label><br><br>
+
 	<label>
 		Publicado?<br>
 		<%=f.radio_button :published, 0 %> Não
 		<%=f.radio_button :published, 1 %> Sim  
-	</label><br><br>
+	</label><br><br>			
 	
 	<button type="submit">Salvar</button>
 <% end %>

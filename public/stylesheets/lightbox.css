@@ -20,6 +20,9 @@
 #imageContainer{
 	padding: 10px;
 	}
+		#imageContainer img{
+			width: auto !important;
+			}
 
 #loading{
 	position: absolute;
