@@ -27,59 +27,36 @@
 			</h1>
 		</div>			
 			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>
-			
-			<%@Produtos.each do |p|%>
 			<div class="Box_line_item">
-				<div id="Up_line_item">
-					<div class="Photo_line">
-						<%
-						counter = 0
-						@Imagens = p.product_images.find(:all)
-						@Imagens.each do |img|%>
-							<%if counter == 1%>
-								<br><br>
-							<%end%>
-							<%if counter == 0%>
-								<%=lightbox_image_tag(img.image.url("p_medio"), img.image.url(), :title => img.legend)%>
-							<%else%>
-								<%=lightbox_image_tag(img.image.url("thumb"), img.image.url(), :title => img.legend)%>
-							<%end%>
-							
-							<%counter = counter + 1%>
-						<%end%>
-						<%#=image_tag("img_preview_lines.png", :width=>"103" , :height=>"121" ) %>
-					</div>
-					<div class="Text_line">
-						<span>
-							<%=image_tag("img_detail_ball.png", :width=>"10" , :height=>"10" ,:class=>"Align_ball" ) %>
-							<h1 class="Title"><%=p.title%></h1><br />
-							<p class="Text_paragh">
-								<%=raw(p.description)%>		
-							</p>					
-						</span>
-					</div>
-					<div class="clear"></div>				
+				<div class="Box_line_item_description">
+				<%= raw @Categoria.description%>
 				</div>
 				<div class="Buttons_line">
-					
-					<%if p.pdf.exists?%>
-						<%=link_to image_tag("bt_informacoes_técnicas.png", :width=>"174" ,:height=>"23"), p.pdf.url,:target=>"_blank"%>
+					<%if @Categoria.pdf.exists?%>
+						<%=link_to image_tag("bt_informacoes_técnicas.png", :width=>"174" ,:height=>"23"), @Categoria.pdf.url,:target=>"_blank"%>
 					<%end%>
-
-					
-					
 					<%=lightbox_image_tag("bt_grafico_comparativo.png", "/images/produtos/grafico.png", :title => "Ver o grafico comparativo")%>
-					
-					
-					
-					<%#=link_to image_tag("bt_informacoes_técnicas.png", :width=>"174" ,:height=>"23" ), "#" %>
-					<%#=link_to image_tag("bt_grafico_comparativo.png", :width=>"226" ,:height=>"24" ), "#" %>	
-					<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>		
 				</div>
-				<div class="clear"></div>
 			</div>
-			<%end%>
-			<%= link_to image_tag("bt_voltar.png"), linhas_path%>
+			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>
+			<div class="Photo_line">
+				<%
+				@Produtos.each do |p|
+				%>
+				<div class="Photo_box">
+					<div class="Photo_title">
+						<%= p.title%>
+					</div>
+					<div class="Photo_photos">
+							<%@Imagens = p.product_images.find(:all)
+							@Imagens.each do |img|%>
+								<%=lightbox_image_tag(img.image.url("p_medio"), img.image.url(), :title => img.legend, :rel=>"lightbox["+p.id.to_s+"]")%>
+							<%end%>
+					</div>
+				</div>
+				<%end%>	
+			</div>
+		<%= link_to image_tag("bt_voltar.png"), linhas_path%>
 		</div>
 	</div>
 </div>

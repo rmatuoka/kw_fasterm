@@ -50,17 +50,44 @@
 		{
 			position:relative;
 			float:left;
-			width:158px;
+			width:100%;
 			height:auto;
 			min-height:50px;	
 			padding-top:20px;
+			margin-bottom: 30px;
 		}
-		.Photo_line img
+		.Photo_box
+		{
+			width:auto;
+			float:left;
+			margin:10px;
+		}
+		.Photo_title
+		{
+			width:100%;
+			height:auto;
+			min-height:30px;
+			text-align:center;
+			color:red;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size: 20px;
+						
+		}
+		.Photo_photos
+		{
+			height:auto;
+			border: 2px solid red;		
+		}
+			.Photo_photos img
+			{
+				margin:10px;	
+			}
+	/*	.Photo_line img
 		{
 			position:relative;
 			display:block;
 			float:left;
-		}
+		} */
 		.Text_line
 		{
 			position:relative;
@@ -112,5 +139,6 @@
 		height:auto;
 		min-height:30px;
 		text-align:right;
-		padding-top:10px;	
+		padding-top:10px;
+		margin: 10px 0px;	
 	}			
