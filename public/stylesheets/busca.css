@@ -20,11 +20,12 @@
 
 .Bt_busca
 {
+	width:100px;
 	position:absolute;
-	top:1px;
-	right:0px;
+	top:-3px;
+	right:-30px;
 }
-.Search input
+.Search_input
 {
 	position:absolute;
 	top:4px;

@@ -1,5 +1,5 @@
 <%content_for :title do%>
-	Vantagens
+	Busca
 <%end%>
 <%content_for :head do %>	
 	<%= stylesheet_link_tag "busca" %>
@@ -12,22 +12,14 @@
 		<h1 class="Title_acquisition_h1"><img src="images/tit_resultado.png" /></h1>
 		<img src="images/img_line_detailinternal.png" width="903" height="7" />
 		<br /><br />
-		<h2 class="Title_acquisition_h2">&nbsp;BUSCAR NOVAMENTE ?</h2>
-		<p class="Prod_notc"><input type="radio"/><label>PRODUTOS</label><input type="radio"/><label>NOTÍCIAS</label></p>
+		<h2 class="Title_acquisition_h2">&nbsp;BUSCAR</h2>
 		<div class="Search">
-			<input type="text" name="Busca" value="Busca"/><label><a href="#"><img src="images/bt_busca.png" class="Bt_busca"/></a></label>
+		<%=form_tag '/busca/resultado', :method => :get, :name=>"formkeyword"%>
+			<%=text_field_tag :keyword, nil ,:class=>"Search_input"%>
+			<%=image_submit_tag "bt_busca.png", :class=>"Bt_busca"%>
+		</form>
 		</div>
-		<br />
-		<h2 class="Title_acquisition_h3">RESULTADOS DA BUSCA DE NOTÍCIAS.</h2>
-		<br />
-		<img src="images/img_detailline_busca.png" class="img_align_line_busca1" />
-		<div class="Item_busca">
-			<label class="Title_name">Treinamento Fasterm</label><span class="Title_data">11/09/2010</span>
-			<p class="Text_busca">Dando início aos trabalhos de abertura das para todo o mercado nacional, dos linha Fasterm, realizamos no último dia 19/08, em nossa fábrica em Atibaia, o primeiro treinamento.</p>
-			<img src="images/img_detailline_busca.png" class="img_align_line_busca2" />
-		</div>
-		<br />	
-		
+		<br />		
 		<div id="clear"></div>
 		</div>
 	</div>

@@ -91,7 +91,11 @@ KwFasterm::Application.routes.draw do
 	end
   }
   resources :contato
-  resources :busca
+	resources :busca do
+	  collection do
+		get 'resultado'
+	  end
+	end
   resources :esquemas
   resources :simulations
   resources :home do
