@@ -23,6 +23,15 @@ class SimulationsController < ApplicationController
     @CUSTO_DIESEL = 0.00
     @CUSTO_ENERGIA = 0.00
     
+    #CO2
+    @CO2_BASE_DIESEL = 3.11
+    @CO2_BASE_GLP = 2.91
+    
+    @TOTAL_KG_CO2 = 0.00
+    
+    @TOTAL_CO2_ANUAL = 0.0
+    @TOTAL_CO2_MES = 0.0
+    
     #FONTES DE ENERGIA
     @E_GLP = 2.50
     @E_DIESEL = 2.10
@@ -79,11 +88,33 @@ class SimulationsController < ApplicationController
       puts "GLP"
       @CUSTO_GLP = calcula_custo(calcula_horas_necessarias(total_litros), "glp")
       puts "CUSTO GLP " + @CUSTO_GLP.to_s 
+      #CALCULA CO2
+      if params[:valor_energia].blank?
+        @TOTAL_KG_CO2 = (@CUSTO_GLP / @E_GLP).to_f
+      else
+        @TOTAL_KG_CO2 = (@CUSTO_GLP / params[:valor_energia].to_f).to_f
+      end
+      #CO2
+      @TOTAL_CO2_ANUAL = (@TOTAL_KG_CO2 * @CO2_BASE_GLP * 12)/1000
+      @TOTAL_CO2_MES = (@TOTAL_KG_CO2 * @CO2_BASE_GLP)/1000
+      
+      #RESULTADO
       @Economia = 100 - ((@CUSTO_FT / @CUSTO_GLP) * 100).round(2)
     when "2"
       puts "DIESEL"
       @CUSTO_DIESEL = calcula_custo(calcula_horas_necessarias(total_litros), "diesel")
       puts "CUSTO DIESEL " + @CUSTO_DIESEL.to_s
+      #CALCULA CO2
+      if params[:valor_energia].blank?
+        @TOTAL_KG_CO2 = (@CUSTO_GLP / @E_DIESEL).to_f
+      else
+        @TOTAL_KG_CO2 = (@CUSTO_GLP / params[:valor_energia].to_f).to_f
+      end
+      #CO2
+      @TOTAL_CO2_ANUAL = (@TOTAL_KG_CO2 * @CO2_BASE_DIESEL * 12)/1000
+      @TOTAL_CO2_MES = (@TOTAL_KG_CO2 * @CO2_BASE_DIESEL)/1000
+      
+      #RESULTADO
       @Economia = 100 - ((@CUSTO_FT / @CUSTO_DIESEL) * 100).round(2)
     when "3"
       puts "ENERGIA"
@@ -94,6 +125,9 @@ class SimulationsController < ApplicationController
     
     #RETORNA A % DE ECONOMIA
     puts "% DE ECONOMIA => " + @Economia.to_s
+    
+    puts "CO2 ANO => " + @TOTAL_CO2_ANUAL.to_s
+    puts "CO2 MES => " + @TOTAL_CO2_MES.to_s
   end
   
   def calcula_custo_ft(horas_de_funcionamento)
@@ -107,6 +141,7 @@ class SimulationsController < ApplicationController
       when "glp"
         if params[:valor_energia].blank?
           custo = ((horas_de_funcionamento * @KCAL_GLP_UN).to_f * @E_GLP) * 30
+          
         else
           custo = ((horas_de_funcionamento * @KCAL_GLP_UN).to_f * params[:valor_energia].to_f) * 30
         end
