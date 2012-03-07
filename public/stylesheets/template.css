@@ -423,9 +423,7 @@ body
 		}
 		.Box_vantagens
 		{
-			background-image:url(../images/bg_video.png);
-			background-repeat:repeat-y;
-			background-position:top center;	
+
 			position:relative;
 			width:330px;
 			min-height:360px;
