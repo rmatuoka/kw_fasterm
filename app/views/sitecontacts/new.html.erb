@@ -1,3 +1,4 @@
+
 <%content_for :title do%>
 	Contato
 <%end%>
@@ -12,7 +13,8 @@
 		<div id="Line_box">
 			<%= form_for(@Contato) do |f| %>
 			<h1 class="Title_internal_h1"><%= image_tag("tit_contato.png", :width=>"112", :height=>"17")%></h1><br />
-			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>		
+			<%=image_tag("img_line_ldetail_show.png", :width=>"900" , :height=>"12" ) %>	
+			<h2>Para entrar em contato conosco ou agendar uma visita preencha os campos abaixo:</h2>	
 			<div id="Contato_boxleft">
 				<label>Nome:</label><div id="input_bg_field"><%=f.text_field :name, :class => "input_field"%></div><br />
 				<label>E-Mail:</label><div id="input_bg_field"><%=f.text_field :email, :class => "input_field"%></div><br />
@@ -32,7 +34,10 @@
 				<label>Mensagem:</label><div id="input_bg_message"><%=f.text_area(:message, :class=>"input_message")%></div><br />
 				<%= image_submit_tag("bt_enviar_contato.png", :width=>"100" , :height=>"37", :class=>"bt_align_contato")  %>
 			</div>
-			<% end %>	
-		</div>	
+			<% end %>
+		</div>
 	</div>
+	<h3>Se preferir, contate-nos pelo telefone 11 4414.1488 ou e-mail contato@fasterm.com.br.
+	<br>Estamos à Rua da Bahia, 22 - Recreio Estoril, Atibaia - SP - CEP 12944060</h3>
 </div>
+	
