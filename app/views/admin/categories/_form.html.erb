@@ -25,6 +25,9 @@
 		<%=f.radio_button :published, 0 %> Não
 		<%=f.radio_button :published, 1 %> Sim  
 	</label><br><br>			
-	
+	<label>
+		Mostrar Grafico?
+	    <%= f.check_box :graphic_display %>
+	</label><br><br>			
 	<button type="submit">Salvar</button>
 <% end %>
