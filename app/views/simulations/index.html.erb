@@ -13,6 +13,7 @@
 			jQuery("#Motel").slideUp('slow');
 			jQuery("#Hospital").slideUp('slow');
 			jQuery("#Academia").slideUp('slow');
+			jQuery("#Condominio").slideUp('slow');
 		});
 
 		jQuery('#empreendimento_2').click(function(){
@@ -22,6 +23,7 @@
 			jQuery("#Hotel").slideUp('slow');
 			jQuery("#Hospital").slideUp('slow');
 			jQuery("#Academia").slideUp('slow');
+			jQuery("#Condominio").slideUp('slow');
 		});
 
 		jQuery('#empreendimento_3').click(function(){
@@ -31,6 +33,7 @@
 			jQuery("#Hotel").slideUp('slow');
 			jQuery("#Motel").slideUp('slow');
 			jQuery("#Academia").slideUp('slow');
+			jQuery("#Condominio").slideUp('slow');
 		});
 
 		jQuery('#empreendimento_4').click(function(){
@@ -40,6 +43,17 @@
 			jQuery("#Hotel").slideUp('slow');
 			jQuery("#Motel").slideUp('slow');
 			jQuery("#Hospital").slideUp('slow');
+			jQuery("#Condominio").slideUp('slow');
+		});
+		
+		jQuery('#empreendimento_5').click(function(){
+			//jQuery("#Hotel").show();
+			jQuery("#Condominio").slideDown('slow');
+
+			jQuery("#Hotel").slideUp('slow');
+			jQuery("#Motel").slideUp('slow');
+			jQuery("#Hospital").slideUp('slow');
+			jQuery("#Academia").slideUp('slow');
 		});
 
 	});
@@ -62,6 +76,7 @@
 				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "2"%> MOTEL</li>
 				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "3"%> HOSPITAL</li>
 				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "4"%> ACADEMIA</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :empreendimento, "5"%> CONDOMÍNIO RESIDENCIAL</li>
 			</u>
 			<br />
 			
@@ -100,6 +115,20 @@
 				<%=text_field_tag :n_banhos_academia, nil, :class => "Itminput_font_sim_gray" %> <br />
 			</div>
 			
+			<div id="Condominio" style="display:none;">
+
+				<span class="Tit_font_sim_blue">Qual é o número de apartamentos de seu Condomínio?</span>
+				<br /><br />
+				<%=text_field_tag :n_apartamentos_cond, nil, :class => "Itminput_font_sim_gray"%>
+
+				<br /><br />
+				<span class="Tit_font_sim_blue">Qual a média de moradores por apartamento?</span>
+				<br /><br />
+				<%=text_field_tag :n_leitos_cond, nil, :class => "Itminput_font_sim_gray"%>
+				<br /><br />
+
+			</div>
+			
 			<div id="Energias">
 			<span class="Tit_font_sim_gray">Que tipo de energia é utilizada no seu empreendimento?</span>
 			<br /><br />
@@ -107,11 +136,17 @@
 				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "1"%>GLP (Gás Liquefeito de Petróleo)</li>
 				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "2"%>DIESEL</li>
 				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "3"%>ENERGIA ELÉTRICA</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "4"%>GN (Gás Natural)</li>
 			</ul>
 			<br /><br />
 			</div>
 			
 			<div id="Custo">
+			<span class="Tit_font_sim_gray">Qual é o valor da energia elétrica ?*</span><br />
+
+			<span class="Tit_font_sim_gray">R$</span> <%=text_field_tag :valor_energia_e, nil, :class => "Itminput_font_sim_gray" %> <br />
+			<span class="Tit_font_sim_gray" style="font-size:10px !important;"><i>*Deixe este campo em branco para utilizar o valor padrão da fonte de energia.</i></span><br /><br />
+			
 			<span class="Tit_font_sim_gray">Qual é o valor da energia utilizada ?*</span><br />
 			
 			<span class="Tit_font_sim_gray">R$</span> <%=text_field_tag :valor_energia, nil, :class => "Itminput_font_sim_gray" %> <br />
