@@ -84,6 +84,11 @@ p{
 	margin-left:30px;
 	line-height: 18px;	
 	}
+
+#text_content_cases p{
+	display:none;
+	}
+
 #text_content_cases h1{
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:18px;
