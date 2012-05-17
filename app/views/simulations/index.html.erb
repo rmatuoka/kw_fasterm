@@ -57,6 +57,11 @@
 		});
 
 	});
+	
+	function mudaValor(x)
+	{
+		jQuery("#valor").html(x);
+	}
 	</script>
 	
 <%end%>
@@ -136,17 +141,17 @@
 			<span class="Tit_font_sim_gray">Que tipo de energia é utilizada no seu empreendimento?</span>
 			<br /><br />
 			<ul>
-				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "1"%>GLP (Gás Liquefeito de Petróleo)</li>
-				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "2"%>DIESEL</li>
-				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "3"%>ENERGIA ELÉTRICA</li>
-				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "4"%>GN (Gás Natural)</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "1", nil, :onclick => "mudaValor('Qual é o valor do GLP?*')"%> GLP (Gás Liquefeito de Petróleo)</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "2", nil, :onclick => "mudaValor('Qual é o valor do diesel?*')"%> DIESEL</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "3", nil, :onclick => "mudaValor('Qual é o valor da Energia Elétrica?*')"%> ENERGIA ELÉTRICA</li>
+				<li class="Itmchck_font_sim_gray"><%=radio_button_tag :combustivel, "4", nil, :onclick => "mudaValor('Qual é o valor do GN?*')"%> GN (Gás Natural)</li>
 			</ul>
 			<br /><br />
 			</div>
 			
 			<div id="Custo">
 			
-			<span class="Tit_font_sim_gray">Qual é o valor da energia utilizada?*</span><br />
+			<span class="Tit_font_sim_gray" id="valor">Qual é o valor da energia utilizada?*</span><br />
 			<span class="Tit_font_sim_gray">R$</span> <%=text_field_tag :valor_energia, nil, :class => "Itminput_font_sim_gray" %> <br />
 			<span class="Tit_font_sim_gray" style="font-size:10px !important;"><i>*Deixe este campo em branco para utilizar o valor padrão da fonte de energia.</i></span>
 			<br /><br />
