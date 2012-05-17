@@ -40,10 +40,8 @@ class SimulationsController < ApplicationController
     @E_GLP = 2.50
     @E_DIESEL = 2.10
     
-    params[:valor_energia_e] = params[:valor_energia_e].gsub(",",".")
-    
     if !params[:valor_energia_e].blank?
-      @E_ENERGIA = params[:valor_energia_e].to_f
+      @E_ENERGIA = params[:valor_energia_e].gsub(",",".").to_f
     else
       @E_ENERGIA = 0.42
     end
