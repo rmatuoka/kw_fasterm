@@ -58,6 +58,9 @@ class SimulationsController < ApplicationController
     #TRATA CUSTO
     params[:valor_energia] = params[:valor_energia].gsub(",",".")
     
+    params[:taxa_ocupacao_hotel] = params[:taxa_ocupacao_hotel].gsub("%","")
+    params[:rotatividade_motel] = params[:rotatividade_motel].gsub("%","")
+    
     #VERIFICA TIPO DE EMPREENDIMENTO
     case params[:empreendimento]
     when "1"
