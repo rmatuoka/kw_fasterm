@@ -33,8 +33,14 @@
 				</div>
 				<div id='divclear'></div>
 				<div id="eventos_body<%= $i %>" class="hide body_eventos">
-						De: <%=eventos.date_start.to_date.strftime("%d/%m/%Y")%><br>
-						Até: <%=eventos.date_end.to_date.strftime("%d/%m/%Y")%><br>
+						<%if eventos.date_start.to_date.strftime("%d/%m/%Y") == eventos.date_end.to_date.strftime("%d/%m/%Y")%>
+							Dia: <%=eventos.date_start.to_date.strftime("%d/%m/%Y")%><br>
+						<%else%>
+							De: <%=eventos.date_start.to_date.strftime("%d/%m/%Y")%><br>
+							Até: <%=eventos.date_end.to_date.strftime("%d/%m/%Y")%><br>
+						<%end%>
+						
+						
 						<br>
 						<br>
 						<%= raw eventos.description%>
