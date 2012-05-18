@@ -10,7 +10,8 @@
 		</div>
 		
 		<div id="Grid">
-			<h3><%=@Notice.title%></h3><br>
+			<h3><%=@Notice.title%></h3><br /><br />
+			<%= image_tag(@Notice.image.url())%>
 		</div>
 		<div class="Linha"></div>
 	</div>
