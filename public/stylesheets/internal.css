@@ -109,6 +109,7 @@ body
 		position:relative;
 		top:18px;
 		margin-left:50px;
+		z-index:1000;		
 		}
 		#Contato
 		{
@@ -121,7 +122,9 @@ body
 			float:right;
 			font-weight:normal;
 			font-size:14px;			
-			color:#3ab3f9;				
+			color:#3ab3f9;	
+			z-index:2000;
+			position: relative;						
 		}
 			#Contato a
 			{
@@ -153,7 +156,7 @@ body
 			width:580px;
 			height:33px;
 			margin:auto;
-			z-index:10000;
+			z-index:1000;
 		}	
 		#Menu ul
 		{
