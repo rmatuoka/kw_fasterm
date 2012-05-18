@@ -11,6 +11,7 @@
 		
 		<div id="Grid">
 			<h3><%=@Notice.title%></h3><br /><br />
+			<h4>Link: <%=@Notice.image.url()%></h4><br /><br />
 			<%= image_tag(@Notice.image.url())%>
 		</div>
 		<div class="Linha"></div>
