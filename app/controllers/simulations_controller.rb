@@ -41,7 +41,7 @@ class SimulationsController < ApplicationController
     @E_DIESEL = 2.10
     
     if !params[:valor_energia_e].blank?
-      @E_ENERGIA = params[:valor_energia_e].to_f
+      @E_ENERGIA = params[:valor_energia_e].gsub(",",".").to_f
     else
       @E_ENERGIA = 0.42
     end
@@ -57,6 +57,9 @@ class SimulationsController < ApplicationController
     
     #TRATA CUSTO
     params[:valor_energia] = params[:valor_energia].gsub(",",".")
+    
+    params[:taxa_ocupacao_hotel] = params[:taxa_ocupacao_hotel].gsub("%","")
+    params[:rotatividade_motel] = params[:rotatividade_motel].gsub("%","")
     
     #VERIFICA TIPO DE EMPREENDIMENTO
     case params[:empreendimento]
