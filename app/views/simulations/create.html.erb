@@ -20,7 +20,7 @@
 	<br /><br /><br />
 	<%if @TOTAL_CO2_ANUAL > 0 && @TOTAL_CO2_MES > 0%>
 	<p class="Itmrsult_font_gray">
-		Você deixará de emitir <%=@TOTAL_CO2_ANUAL.round(2)%> Kg de CO<sub style="font-size:9px; vertical-align:top;">2</sub> por ano e <%=@TOTAL_CO2_MES.round(2)%> Kg de CO<sub style="font-size:9px; vertical-align:top;">2</sub> por mês.</p>
+		Você deixará de emitir <%=@TOTAL_CO2_ANUAL.round(2)%> Ton. de CO<sub style="font-size:9px; vertical-align:top;">2</sub> por ano e <%=@TOTAL_CO2_MES.round(2)%> Ton. de CO<sub style="font-size:9px; vertical-align:top;">2</sub> por mês.</p>
 	<%end%>
 	<br /><br /><br />
 	    <%=link_to image_tag("bt_voltar_simulator.png", :width=>"100", :height=>"37",:class=>"Bt_align_sim"),"/simulations" %>

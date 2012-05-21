@@ -29,7 +29,7 @@ class SimulationsController < ApplicationController
     #CO2
     @CO2_BASE_DIESEL = 3.11
     @CO2_BASE_GLP = 2.91
-    @CO2_BASE_GN = 2.91
+    @CO2_BASE_GN = 2.65
     
     @TOTAL_KG_CO2 = 0.00
     
@@ -57,7 +57,6 @@ class SimulationsController < ApplicationController
     
     #TRATA CUSTO
     params[:valor_energia] = params[:valor_energia].gsub(",",".")
-    
     params[:taxa_ocupacao_hotel] = params[:taxa_ocupacao_hotel].gsub("%","")
     params[:rotatividade_motel] = params[:rotatividade_motel].gsub("%","")
     
@@ -114,12 +113,18 @@ class SimulationsController < ApplicationController
       #CALCULA CO2
       if params[:valor_energia].blank?
         @TOTAL_KG_CO2 = (@CUSTO_GLP / @E_GLP).to_f
+        puts "valor GLP = " + @E_GLP.to_s
       else
         @TOTAL_KG_CO2 = (@CUSTO_GLP / params[:valor_energia].to_f).to_f
+        puts "valor GLP Custom = " + params[:valor_energia]
       end
+      
       #CO2
+      puts "TOTAL_KG_CO2 = " + @TOTAL_KG_CO2.to_s
       @TOTAL_CO2_ANUAL = (@TOTAL_KG_CO2 * @CO2_BASE_GLP * 12)/1000
       @TOTAL_CO2_MES = (@TOTAL_KG_CO2 * @CO2_BASE_GLP)/1000
+      
+      puts "CO2_BASE_GLP = " + @CO2_BASE_GLP.to_s
       
       #RESULTADO
       @Economia = 100 - ((@CUSTO_FT / @CUSTO_GLP) * 100).round(2)
