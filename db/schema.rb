@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516191920) do
+ActiveRecord::Schema.define(:version => 20120522134413) do
 
   create_table "case_images", :force => true do |t|
     t.integer  "case_id"
@@ -198,6 +198,7 @@ ActiveRecord::Schema.define(:version => 20120516191920) do
     t.string   "video_content_type"
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
+    t.integer  "orderprod"
   end
 
   create_table "request_catalogs", :force => true do |t|

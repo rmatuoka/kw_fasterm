@@ -29,6 +29,11 @@
 		Descrição:<br>
 		<%=f.text_area :description, :class => "mceEditor"  %><br>
 	</label><br><br>
+
+	
+	<%= f.label :orderprod, "Orderm:" %><br>
+	<%= f.select :orderprod,([["Selecione a Ordem", ""], ["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"],["8", "8"],["9", "9"],["10", "10"]]) %>	
+	<br><br>
 	
 	<label>
 		Publicado?<br>
