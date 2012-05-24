@@ -76,6 +76,26 @@ p{
 	clear:both;
 	}
 
+#text_content_noticias{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#2f4b2f;
+	width:940px;
+	margin-left:30px;
+	line-height: 18px;	
+	}
+
+#text_content_noticias p{
+	display:none;
+	}
+
+#text_content_noticias h1{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	color:#2f4b2f;
+	margin:15px 0px 25px 0px;
+	}
+
 #text_content_cases{
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:12px;
