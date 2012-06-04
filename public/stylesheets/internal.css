@@ -150,10 +150,10 @@ body
 			background-repeat:no-repeat;
 			background-position:center;
 			position:absolute;
-			left:180px;
+			left:80px;
 			top:132px;
 		/*	top:136px; */
-			width:580px;
+			width:677px;
 			height:33px;
 			margin:auto;
 			z-index:1000;
@@ -305,6 +305,29 @@ body
 						background-image:url(../images/menu/bt_eventos.png);
 						background-repeat:no-repeat;
 						background-position:0px -11px;
+						width:128px;
+						height:14px;				
+				}	
+			
+			.Bt_noticias_menu
+			{	
+			}
+				.Bt_noticias_menu a
+				{
+					background-image:url(../images/menu/bt_noticias.png);
+					background-repeat:no-repeat;
+					background-position:0px 0px;
+					width:128px;
+					text-decoration:none;
+					padding-right:74px;
+					*padding-top:17px;  /*ie7*/		
+										
+				}	
+				.Bt_noticias_menu a:hover
+				{
+						background-image:url(../images/menu/bt_noticias.png);
+						background-repeat:no-repeat;
+						background-position:0px -21px;
 						width:128px;
 						height:14px;				
 				}					
